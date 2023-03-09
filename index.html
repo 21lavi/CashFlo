@@ -5,20 +5,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- for slider -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- for slider end -->
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/home.js"></script>
   </head>
   <body>
-    <div class="home-banner">
+    <div class="home-banner reveal">
       <div class="banner-text">
         <h1 class="title animated-text">
           India’s only Integrated <span>Account Payables</span> &
@@ -29,7 +43,9 @@
           growing business
         </p>
         <div class="animated-text">
-          <button class="btn-default button">View Video</button>
+          <button class="btn-default button">
+            View Video <i class="fa fa-arrow-right"></i>
+          </button>
         </div>
         <div class="modalOverlayNew"></div>
 
@@ -44,13 +60,13 @@
         </div>
       </div>
     </div>
-    <div class="video_wrapper">
+    <div class="video_wrapper reveal">
       <img src="images/video.png" />
       <button class="play-button" id="tradeButton">
         <img src="images/play-btn.png" />
       </button>
     </div>
-    <div class="container-box">
+    <div class="container-box reveal">
       <div class="brand-logo">
         <p>LOVED BY TEAMS AROUND THE WORLD</p>
         <div class="logo-team">
@@ -99,12 +115,415 @@
         </div>
       </div>
     </div>
-    <div class="automation_slider">
+    <div class="automation_slider reveal">
       <div class="container-box">
         <h2 class="title animated-text">
           End to end <span>AP Process Automation</span> &
           <span>Vendor Financing,</span> tailored for your specific needs
         </h2>
+        <div class="slider single-item">
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+          <div class="item">
+            <img src="images/slide.webp" />
+          </div>
+        </div>
+      </div>
+      <div class="progressBarContainer">
+        <div class="item">
+          <span data-slick-index="0" class="progressBar"></span>
+          <h3><span>01</span>Capture Invoice</h3>
+        </div>
+        <div class="item">
+          <span data-slick-index="1" class="progressBar"></span>
+          <h3><span>02</span>Approve Invoice</h3>
+        </div>
+        <div class="item">
+          <span data-slick-index="2" class="progressBar"></span>
+          <h3><span>03</span>Pay as per your convenience</h3>
+        </div>
+        <div class="item">
+          <span data-slick-index="3" class="progressBar"></span>
+          <h3><span>04</span>Auto Reconcile</h3>
+        </div>
+        <div class="item">
+          <span data-slick-index="4" class="progressBar"></span>
+          <h3><span>05</span>Vendor Portal</h3>
+        </div>
+        <div class="item">
+          <span data-slick-index="5" class="progressBar"></span>
+          <h3><span>06</span>Spend Analysis</h3>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="process_wrap reveal">
+      <h2 class="title">
+        The <span>Account Payables platform</span> you’ve<br />always wanted!
+      </h2>
+      <div class="container-box">
+        <div class="product-row">
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">
+              Payments & Reconciliation
+            </h3>
+            <p class="animated-text">
+              Automate supplier payments across multiple bank accounts, automate
+              bank reconciliations and customize approval workflows
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">GST Hold</h3>
+            <p class="animated-text">
+              Check real time GST compliance status of vendors within payments
+              dashboard. Withhold GST component or entire payment for
+              non-compliant vendors
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">Vendor Portal</h3>
+            <p class="animated-text">
+              Onboard vendors with built-in KYC checks, Enable them to
+              acknowledge PO, send invoice, track payments and adjustments
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">AP Automation</h3>
+            <p class="animated-text">
+              Digitize paper based trail, Smart OCR capture with best-in-class accuracy for all types of invoices with optional 3-way matching
+
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">Dynamic Vendor Financing</h3>
+            <p class="animated-text">
+              Improve EBITDA by paying early or extend credit period to manage your working capital
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="product-box">
+            <div class="product-image">
+              <img src="images/placeholder.jpg" />
+            </div>
+            <h3 class="small-heading animated-text">Spend Analysis</h3>
+            <p class="animated-text">
+              Customised spend management dashboards tailored for your needs. Track spends vs budgets; identify excess spends & leakages immediately 
+            </p>
+            <div class="animated-text">
+              <a href="#">View Product <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rank-wrapper">
+      <div class="rank-row">
+        <div class="inner-box">
+          <h2>3%</h3>
+          <p>cost reduction</p>
+        </div>
+        <div class="inner-box">
+          <h2>>90%</h3>
+          <p>Error Reductions</p>
+        </div>
+        <div class="inner-box">
+          <h2>5 days</h3>
+          <p>Faster book closure/month</p>
+        </div>
+        <div class="inner-box">
+          <h2>100%</h3>
+          <p>peace of mind</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="client_review reveal">
+      <div class="container-box">
+        <div class="clinet_review_title">
+          <h2 class="title">
+            Don't just take our word for it!<br />
+            <span class="color_text">see customerstories</span>
+          </h2>
+        </div>
+        <div class="testimonial_slider">
+          <div>
+            <div class="testimonial_inner_slide">
+              <div class="testimonail_content">
+                <p class="review_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  consectetur non arcu at cursus. Suspendisse convallis ante
+                  nisl, at luctus tellus fringilla vitae. Vestibulum pharetra
+                  enim in mattis tincidunt. Maecenas lobortis risus vitae felis
+                  consequat, et pharetra risus pretium. Mauris ultrices
+                  malesuada nisi varius finibus. Pellentesque ac tincidunt
+                  libero.
+                </p>
+                <div class="testimonial_bottom_content">
+                  <p class="testimonial_name">Bipin Sharma</p>
+                  <p class="position">Head of Treasury</p>
+                  <p>Haldi Petrochemicals</p>
+                </div>
+              </div>
+              <div class="testimonial_image">
+                <img src="images/client-image.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial_inner_slide">
+              <div class="testimonail_content">
+                <p class="review_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  consectetur non arcu at cursus. Suspendisse convallis ante
+                  nisl, at luctus tellus fringilla vitae. Vestibulum pharetra
+                  enim in mattis tincidunt. Maecenas lobortis risus vitae felis
+                  consequat, et pharetra risus pretium. Mauris ultrices
+                  malesuada nisi varius finibus. Pellentesque ac tincidunt
+                  libero.
+                </p>
+                <div class="testimonial_bottom_content">
+                  <p class="testimonial_name">Bipin Sharma</p>
+                  <p class="position">Head of Treasury</p>
+                  <p>Haldi Petrochemicals</p>
+                </div>
+              </div>
+              <div class="testimonial_image">
+                <img src="images/client_image2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial_inner_slide">
+              <div class="testimonail_content">
+                <p class="review_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  consectetur non arcu at cursus. Suspendisse convallis ante
+                  nisl, at luctus tellus fringilla vitae. Vestibulum pharetra
+                  enim in mattis tincidunt. Maecenas lobortis risus vitae felis
+                  consequat, et pharetra risus pretium. Mauris ultrices
+                  malesuada nisi varius finibus. Pellentesque ac tincidunt
+                  libero.
+                </p>
+                <div class="testimonial_bottom_content">
+                  <p class="testimonial_name">Bipin Sharma</p>
+                  <p class="position">Head of Treasury</p>
+                  <p>Haldi Petrochemicals</p>
+                </div>
+              </div>
+              <div class="testimonial_image">
+                <img src="images/client-image.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial_inner_slide">
+              <div class="testimonail_content">
+                <p class="review_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  consectetur non arcu at cursus. Suspendisse convallis ante
+                  nisl, at luctus tellus fringilla vitae. Vestibulum pharetra
+                  enim in mattis tincidunt. Maecenas lobortis risus vitae felis
+                  consequat, et pharetra risus pretium. Mauris ultrices
+                  malesuada nisi varius finibus. Pellentesque ac tincidunt
+                  libero.
+                </p>
+                <div class="testimonial_bottom_content">
+                  <p class="testimonial_name">Bipin Sharma</p>
+                  <p class="position">Head of Treasury</p>
+                  <p>Haldi Petrochemicals</p>
+                </div>
+              </div>
+              <div class="testimonial_image">
+                <img src="images/client_image2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial_inner_slide">
+              <div class="testimonail_content">
+                <p class="review_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  consectetur non arcu at cursus. Suspendisse convallis ante
+                  nisl, at luctus tellus fringilla vitae. Vestibulum pharetra
+                  enim in mattis tincidunt. Maecenas lobortis risus vitae felis
+                  consequat, et pharetra risus pretium. Mauris ultrices
+                  malesuada nisi varius finibus. Pellentesque ac tincidunt
+                  libero.
+                </p>
+                <div class="testimonial_bottom_content">
+                  <p class="testimonial_name">Bipin Sharma</p>
+                  <p class="position">Head of Treasury</p>
+                  <p>Haldi Petrochemicals</p>
+                </div>
+              </div>
+              <div class="testimonial_image">
+                <img src="images/client-image.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="query-wrap">
+      <h3 class="small-heading">What problems do you want to solve today?</h3>
+      <div class="query-row">
+        <div class="find-solution">
+          <h4>Payments & Reconciliation</h4>
+          <ul>
+            <li>No bank H2H integration</li>
+            <li>Audit trails for advances</li>
+            <li>Storing digital invoice copies</li>
+            <li>Manual bank reconciliations</li>
+            <li>Email based approvals</li>
+            <li>ITC loss</li>
+          </ul>
+        </div>
+        <div class="find-solution">
+          <h4>Dynamic vendor financing</h4>
+          <ul>
+            <li>Providing vendors liquidity</li>
+            <li>reducing purchase cost</li>
+            <li>Extending days payables</li>
+            <li>Timely MSME payments</li>
+            <li>TREDS compliance</li>
+            <li>Margin improvement</li>
+            <li>Low returns on idle funds</li>         
+          </ul>
+        </div>
+        <div class="find-solution">
+          <h4>AP automation</h4>
+          <ul>
+            <li>manual invoice entry</li>
+            <li>errors in liability booking</li>
+            <li> Limited process control</li>
+           
+          </ul>
+        </div>
+        <div class="find-solution">
+          <h4>Vendor Portal</h4>
+          <ul>
+            <li>Long checklist for vendor onboarding</li>
+            <li>excessive vendor queries</li>
+            <li>strained vendor relations</li>
+            <li>balance confirmation with vendors</li>
+            <li>poor vendor experience</li>            
+          </ul>
+        </div>
+      </div>
+      <div class="find-solution-btn">
+        <button class="btn btn-default">Find a solution <i class="fa fa-arrow-right"></i></button>
+      </div>
+    </div>
+    <div class="cashflo-advantage">
+      <h2 class="title">The <span>Cashflo</span> Advantage</h2>
+      <div class="advantage-slider">
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>01</span>Made for India</h3>
+          </div>
+        </div>
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>01</span>Made for India</h3>          
+          </div>
+        </div>
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>02</span>Agility in innovations</h3>           
+          </div>
+        </div>
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>03</span>Tailored for your needs</h3>           
+          </div>
+        </div>
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>04</span>State-of-the-art ERP integration capabilities</h3>           
+          </div>
+        </div>
+        <div>
+          <div class="item">
+            <img src="images/placeholder.jpg">
+            <h3><span>05</span>Execution and managed services excellence</h3>           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="power_business">
+      <div class="power_business_btn">
+        <a href="">Book a demo</a>
+      </div>
+
+      <div class="wrapper">
+        <div class="marquee">
+          <p>
+            <span>Power your business with Cashflow </span>
+          </p>
+          <p>
+            <span>Power your business with Cashflow </span>
+          </p>
+          <p>
+            <span>Power your business with Cashflow </span>
+          </p>
+        </div>
       </div>
     </div>
   </body>
