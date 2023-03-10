@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Light.eot');
+    src: url('RecklessNeue-Light.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Light.woff2') format('woff2'),
+        url('RecklessNeue-Light.woff') format('woff'),
+        url('RecklessNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Bold.eot');
+    src: url('RecklessNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Bold.woff2') format('woff2'),
+        url('RecklessNeue-Bold.woff') format('woff'),
+        url('RecklessNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Heavy.eot');
+    src: url('RecklessNeue-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Heavy.woff2') format('woff2'),
+        url('RecklessNeue-Heavy.woff') format('woff'),
+        url('RecklessNeue-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Regular.eot');
+    src: url('RecklessNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Regular.woff2') format('woff2'),
+        url('RecklessNeue-Regular.woff') format('woff'),
+        url('RecklessNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Thin.eot');
+    src: url('RecklessNeue-Thin.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Thin.woff2') format('woff2'),
+        url('RecklessNeue-Thin.woff') format('woff'),
+        url('RecklessNeue-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-Medium.eot');
+    src: url('RecklessNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-Medium.woff2') format('woff2'),
+        url('RecklessNeue-Medium.woff') format('woff'),
+        url('RecklessNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('RecklessNeue-SemiBold.eot');
+    src: url('RecklessNeue-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('RecklessNeue-SemiBold.woff2') format('woff2'),
+        url('RecklessNeue-SemiBold.woff') format('woff'),
+        url('RecklessNeue-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
