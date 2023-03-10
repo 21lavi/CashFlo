@@ -186,43 +186,34 @@ $( document ).ready(function() {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  
   });
 // cashflo advantage slider
 $(".advantage-slider").slick({
-  arrows: false,
+  arrows: true,
   dots: false,
-  autoplay: true,
-  // fade: true,
+  autoplay: false,
+  centerMode: true,
+  centerPadding: '190px',
   speed: 900,
   infinite: true,
   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
 
