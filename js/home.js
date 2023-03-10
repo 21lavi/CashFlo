@@ -144,7 +144,7 @@ $(document).ready(function () {
   $(".advantage-slider").slick({
     arrows: true,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     centerMode: true,
     centerPadding: "190px",
     speed: 900,
