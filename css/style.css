@@ -204,11 +204,11 @@ body {
 .progressBarContainer .item {
   display: block;
   width: 16.66%;
-  padding: 0;
   cursor: pointer;
   color: white;
   padding: 0 20px;
   text-align: left;
+  min-height: 190px;
 }
 .progressBarContainer span {
   display: block;
@@ -613,14 +613,16 @@ span.color_text {
   padding: 6px 20px;
   margin-bottom: 20px;
   display: inline-block;
-  transition: all ease 0.3s;
+  transition: all .5s;
   cursor: pointer;
+  position: relative;
 }
 
 .find-solution ul li:hover {
   color: #ef7065;
   border-color: #ef7065;
   font-weight: 600;
+  transform: translateY(-2px);
 }
 .find-solution-btn button {
   font-weight: 500;
@@ -732,7 +734,7 @@ span.color_text {
 .advantage-slider .item:hover .item_icon i {
   color: #f98777;
 }
-.advantage-slider .item:after {
+/* .advantage-slider .item:after {
   content: "";
   position: absolute;
   top: 0;
@@ -743,8 +745,9 @@ span.color_text {
   height: 100%;
   opacity: 0;
   transition: all 0.7s;
+  border-radius: 6.78819px;
   z-index: 0;
-}
+} */
 
 .advantage-slider .item:hover:after {
   opacity: 1;
@@ -1115,6 +1118,9 @@ span.color_text {
   align-items: center;
   justify-content: center;
   margin-top: 43px;
+  transition: all 500ms ease-in;
+  overflow: hidden;
+  position: relative;
 }
 
 .trust-cashflo h3 {
