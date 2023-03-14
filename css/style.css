@@ -961,6 +961,21 @@ span.color_text {
   width: 50%;
   padding: 0 15px;
 }
+.slick-current .col-box-inner{
+  animation-name: moveToLeft;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 .trust-cashflo {
   background: #0d0d0d;
@@ -1018,6 +1033,8 @@ span.color_text {
   border-radius: 50%;
   margin: 0 auto;
   font-size: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .technique-slider .slick-dots li button:before {
