@@ -1,15 +1,5 @@
 $(document).ready(function () {
-  // text animation
-  // gsap.from(".animated-text", {
-  //   ease:"power3.out",
-  //   autoAlpha: 0,
-  //   duration: 1.5,
-  //   start: "center 100%",
-  //     end:"top 50%",
-  // 		markers: true,
-  //   y: -80,
-  //   stagger: 0.3,
-  // });
+
   let reveal = document.querySelectorAll(".reveal");
 
   reveal.forEach((el) => {
@@ -23,12 +13,13 @@ $(document).ready(function () {
         stagger: 0.3,
         opacity: 0,
         duration: 1,
+        
       })
       .from(
         btn,
         { y: -40, opacity: 0, duration: 1.5,  },
         "-=0.6"
-      );
+      );    
 
     ScrollTrigger.create({
       trigger: el,
@@ -39,6 +30,8 @@ $(document).ready(function () {
       animation: tl,
     });
   });
+
+
 
   $(".slider").slick({
     arrows: false,
@@ -167,16 +160,24 @@ $(document).ready(function () {
       },
     ],
   });
+  $(".technique-slider").slick({
+    slidesToShow: 1,
+    infinite:true,
+    dots:true,
+    arrows:false,
+    slidesToScroll: 1,
+    autoplay:false
+   });
   // card hover gradient
-  $(".advantage-slider-inner .item").mouseover(function (e) {
-    $('.advantage-slider-inner .item').css('background', 'transparent')
-    var w = $('.item').width();
-    var h = $('.item').height();
-    $(this).css('background','radial-gradient(ellipse at '+e.pageX+'px '+e.pageY+'px, #ef7065 50%, #ff9a85 100%)');
-  });
-  $(".advantage-slider-inner .item").mouseout(function(){
-    $(".advantage-slider-inner .item").css("background", "transparent");
-  });
+  // $(".advantage-slider-inner .item").mouseover(function (e) {
+  //   $('.advantage-slider-inner .item').css('background', 'transparent')
+  //   var w = $('.item').width();
+  //   var h = $('.item').height();
+  //   $(this).css('background','radial-gradient(ellipse at '+e.pageX+'px '+e.pageY+'px, #ef7065 50%, #ff9a85 100%)');
+  // });
+  // $(".advantage-slider-inner .item").mouseout(function(){
+  //   $(".advantage-slider-inner .item").css("background", "transparent");
+  // });
 });
 
 
