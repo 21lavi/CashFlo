@@ -139,6 +139,7 @@ jQuery(document).ready(function () {
     arrows:false,
     variableWidth: false,
     slidesToScroll: 1,
+    fade: true,
     autoplay:true
    });
   // cashflo advantage slider
