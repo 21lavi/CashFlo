@@ -33,7 +33,7 @@ jQuery(document).ready(function () {
 
 
 
- jQuery(".slider").slick({
+  $(".slider").slick({
     arrows: false,
     dots: false,
     autoplay: true,
@@ -51,16 +51,16 @@ jQuery(document).ready(function () {
   var time = 0.1;
   var progressBarIndex = 0;
 
- jQuery(".progressBarContainer .progressBar").each(function (index) {
+  $(".progressBarContainer .progressBar").each(function (index) {
     var progress = "<div class='inProgress inProgress" + index + "'></div>";
-   jQuery(this).html(progress);
+    $(this).html(progress);
   });
 
- jQuery(".progressBarContainer h3").each(function (index) {
+  $(".progressBarContainer h3").each(function (index) {
     jQuery(this).addClass("slideText" + index);
   });
 
- jQuery(".progressBarContainer .item").each(function (index) {
+  $(".progressBarContainer .item").each(function (index) {
     jQuery(this).addClass("item" + index);
   });
 
@@ -73,25 +73,25 @@ jQuery(document).ready(function () {
 
   function interval() {
     if (
-     jQuery(
+      $(
         '.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]'
       ).attr("aria-hidden") === "true"
     ) {
-      progressBarIndex =jQuery(
+      progressBarIndex = $(
         '.slider .slick-track div[aria-hidden="false"]'
       ).data("slickIndex");
       startProgressbar();
     } else {
       percentTime += 1 / (time + 5);
-     jQuery(".inProgress" + progressBarIndex).css({
+      $(".inProgress" + progressBarIndex).css({
         width: percentTime + "%",
       });
       jQuery(".item" + progressBarIndex).addClass("active");
-      //jQuery(".slideText" + progressBarIndex).css({
+      // $(".slideText" + progressBarIndex).css({
       //   opacity: percentTime + "%",
       // });
       if (percentTime >= 100) {
-       jQuery(".single-item").slick("slickNext");
+        $(".single-item").slick("slickNext");
         progressBarIndex++;
         if (progressBarIndex > 2) {
           progressBarIndex = 0;
@@ -102,11 +102,11 @@ jQuery(document).ready(function () {
   }
 
   function resetProgressbar() {
-   jQuery(".progressBarContainer .item").each(function (index) {
+    $(".progressBarContainer .item").each(function (index) {
       jQuery(this).removeClass('active');
     });
 
-   jQuery(".inProgress").css({
+    $(".inProgress").css({
       width: 0 + "%",
     });
     clearInterval(tick);
@@ -114,14 +114,14 @@ jQuery(document).ready(function () {
   startProgressbar();
   // End ticking machine
 
- jQuery(".item").click(function () {
+  $(".item").click(function () {
     clearInterval(tick);
-    var goToThisIndex =jQuery(this).find("span").data("slickIndex");
-   jQuery(".single-item").slick("slickGoTo", goToThisIndex, false);
+    var goToThisIndex = $(this).find("span").data("slickIndex");
+    $(".single-item").slick("slickGoTo", goToThisIndex, false);
     startProgressbar();
   });
 
- jQuery(".testimonial_slider").slick({
+  $(".testimonial_slider").slick({
     dots: true,
     infinite: true,
     speed: 500,
@@ -132,8 +132,17 @@ jQuery(document).ready(function () {
     fade: true,
     autoplay: true,
   });
+  $(".technique-slider").slick({
+    slidesToShow: 1,
+    infinite:true,
+    dots:true,
+    arrows:false,
+    variableWidth: false,
+    slidesToScroll: 1,
+    autoplay:true
+   });
   // cashflo advantage slider
- jQuery(".advantage-slider").slick({
+  $(".advantage-slider").slick({
     arrows: true,
     dots: false,
     autoplay: true,
@@ -160,23 +169,16 @@ jQuery(document).ready(function () {
       },
     ],
   });
- jQuery(".technique-slider").slick({
-    slidesToShow: 1,
-    infinite:true,
-    dots:true,
-    arrows:false,
-    slidesToScroll: 1,
-    autoplay:false
-   });
+
   // card hover gradient
-  //jQuery(".advantage-slider-inner .item").mouseover(function (e) {
-  //  jQuery('.advantage-slider-inner .item').css('background', 'transparent')
-  //   var w =jQuery('.item').width();
-  //   var h =jQuery('.item').height();
-  //  jQuery(this).css('background','radial-gradient(ellipse at '+e.pageX+'px '+e.pageY+'px, #ef7065 50%, #ff9a85 100%)');
+  // $(".advantage-slider-inner .item").mouseover(function (e) {
+  //   $('.advantage-slider-inner .item').css('background', 'transparent')
+  //   var w = $('.item').width();
+  //   var h = $('.item').height();
+  //   $(this).css('background','radial-gradient(ellipse at '+e.pageX+'px '+e.pageY+'px, #ef7065 50%, #ff9a85 100%)');
   // });
-  //jQuery(".advantage-slider-inner .item").mouseout(function(){
-  //  jQuery(".advantage-slider-inner .item").css("background", "transparent");
+  // $(".advantage-slider-inner .item").mouseout(function(){
+  //   $(".advantage-slider-inner .item").css("background", "transparent");
   // });
 });
 
