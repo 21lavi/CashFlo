@@ -1633,8 +1633,13 @@ span.color_text {
   .find-solution ul li {
     display: inline-block;
     font-size: 12px;
-  }
-
+    margin-right: 5px;
+    padding: 8px 7px;
+    margin-bottom: 12px;
+}
+  .technique-slider .slick-dots {
+    bottom: -30px;
+}
   .find-solution h4 {
     margin-bottom: 15px;
   }
