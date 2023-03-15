@@ -21,8 +21,8 @@ jQuery(document).ready(function () {
 
     ScrollTrigger.create({
       trigger: el,
-      start: "center 50%",
-      end: "top 20%",
+      start: "center 100%",
+      end: "top 50%",
       markers: false,
       toggleActions: "play none none reverse ",
       animation: tl,
