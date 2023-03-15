@@ -4,20 +4,15 @@ jQuery(document).ready(function () {
 
   reveal.forEach((el) => {
     let headings = el.querySelectorAll(".animated-text");
-    let btn = el.querySelector(".btn");
 
     let tl = gsap
       .timeline()
       .from(headings, {
         y: -40,
-        stagger: 0.3,
+        stagger: 0.1,
         opacity: 0,
-        duration: 1,        
-      })
-      .from(
-        btn,
-        { y: -40, opacity: 0, duration: 1.5,  }        
-      );    
+        duration: 1,  
+      })        
 
     ScrollTrigger.create({
       trigger: el,
@@ -26,9 +21,10 @@ jQuery(document).ready(function () {
       markers: false,
       toggleActions: "play none none reverse ",
       animation: tl,
+  
     });
+  
   });
-
 
 
   $(".slider").slick({
@@ -85,9 +81,7 @@ jQuery(document).ready(function () {
         width: percentTime + "%",
       });
       jQuery(".item" + progressBarIndex).addClass("active");
-      // $(".slideText" + progressBarIndex).css({
-      //   opacity: percentTime + "%",
-      // });
+      
       if (percentTime >= 100) {
         $(".single-item").slick("slickNext");
         progressBarIndex++;
@@ -96,9 +90,9 @@ jQuery(document).ready(function () {
         }
         startProgressbar();
       }
-    }
+    }    
   }
-
+  
   function resetProgressbar() {
     $(".progressBarContainer .item").each(function (index) {
       jQuery(this).removeClass('active');
@@ -169,16 +163,20 @@ jQuery(document).ready(function () {
     ],
   });
 
-  // card hover gradient
-  // $(".advantage-slider-inner .item").mouseover(function (e) {
-  //   $('.advantage-slider-inner .item').css('background', 'transparent')
-  //   var w = $('.item').width();
-  //   var h = $('.item').height();
-  //   $(this).css('background','radial-gradient(ellipse at '+e.pageX+'px '+e.pageY+'px, #ef7065 50%, #ff9a85 100%)');
-  // });
-  // $(".advantage-slider-inner .item").mouseout(function(){
-  //   $(".advantage-slider-inner .item").css("background", "transparent");
-  // });
+  
+
+
+
+  $(".coral-wrapper").mousemove(function(ev) {
+    var gradient =this;
+    gradient.style.background = 'radial-gradient( circle at ' 
+    + ev.clientX + 'px '
+    + ev.clientY + 'px, '
+    + 'rgb(255 241 227) -90%, '
+    + 'rgb(239 112 101) 39.27%)';
+
+});
+  
 });
 
 
