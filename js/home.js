@@ -1,35 +1,33 @@
 jQuery(document).ready(function () {
 
-  // let reveal = document.querySelectorAll(".reveal");
+  let reveal = document.querySelectorAll(".reveal");
 
-  // reveal.forEach((el) => {
-  //   let headings = el.querySelectorAll(".animated-text");
-  //   let btn = el.querySelector(".btn");
+  reveal.forEach((el) => {
+    let headings = el.querySelectorAll(".animated-text");
+    let btn = el.querySelector(".btn");
 
-  //   let tl = gsap
-  //     .timeline()
-  //     .from(headings, {
-  //       y: -40,
-  //       stagger: 0.3,
-  //       opacity: 0,
-  //       duration: 1,
-        
-  //     })
-  //     .from(
-  //       btn,
-  //       { y: -40, opacity: 0, duration: 1.5,  },
-  //       "-=0.6"
-  //     );    
+    let tl = gsap
+      .timeline()
+      .from(headings, {
+        y: -40,
+        stagger: 0.3,
+        opacity: 0,
+        duration: 1,        
+      })
+      .from(
+        btn,
+        { y: -40, opacity: 0, duration: 1.5,  }        
+      );    
 
-  //   ScrollTrigger.create({
-  //     trigger: el,
-  //     start: "center 100%",
-  //     end: "top 50%",
-  //     markers: false,
-  //     toggleActions: "play none none reverse ",
-  //     animation: tl,
-  //   });
-  // });
+    ScrollTrigger.create({
+      trigger: el,
+      start: "center 50%",
+      end: "top 20%",
+      markers: false,
+      toggleActions: "play none none reverse ",
+      animation: tl,
+    });
+  });
 
 
 
