@@ -10,6 +10,7 @@
     />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- for slider -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -29,6 +30,7 @@
     <script src="js/home.js"></script>
   </head>
   <body>
+
     <div class="home-banner reveal">
       <div class="main-container">
         <div class="banner-text">
@@ -151,21 +153,7 @@
       </div>
     </div>
     <div class="coral-wrapper" id="wrapper-new">
-      <div class="svg-path">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="lightblue" stroke-width="0.5"/>
-            </pattern>
-            <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-              <rect width="100" height="100" fill="url(#smallGrid)"/>
-              <path d="M 100 0 L 0 0 0 100" fill="none" stroke="lightblue" stroke-width="1"/>
-            </pattern>
-          </defs>        
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-
-      </div>
+      <div class="coral-bg"></div>
       <div class="main-container reveal">
         <div class="text-box animated-text">
           <h2 class="title white-text">
@@ -273,6 +261,7 @@
       </div>
     </div>
     <div class="coral-wrapper">
+      <div class="coral-bg"></div>
       <div class="main-container">
       <div class="text-box animated-text">
         <div class="inner-box ">
@@ -709,7 +698,7 @@
       <div class="wrapper">
         <div class="marquee">
           <p>
-            <span>Power your business with Cashflow </span>
+            <span>Power your business with Cashflow  </span>
           </p>
           <p>
             <span>Power your business with Cashflow </span>
@@ -722,6 +711,8 @@
           </p>
         </div>
       </div>
+      
     </div>
+
   </body>
 </html>
