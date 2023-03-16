@@ -487,6 +487,7 @@ span.color_text {
   transition: all 0.1s ease;
   display: flex;
   align-items: center;
+  transform: translateX(-50%);
   --copies: 2;
   -webkit-animation: marquee-move linear infinite;
   animation: marquee-move linear infinite;
@@ -605,18 +606,24 @@ span.color_text {
 .coral-wrapper {
   position: relative;
   padding: 125px 0;
-    background: linear-gradient( 198.31deg, #fff1e3 -40.84%, var(--secondaryColor) 39.27%  );
-    box-shadow: 0px 0px 15px rgba(243, 115, 74, 0.11);
- 
+  background: linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%), url(../images/newgrid-bg.svg);
+  box-shadow: 0px 0px 15px rgba(243, 115, 74, 0.11); 
+  transition: opacity 0.5s ease-in-out; 
 }
-.svg-path {
+/* .coral-wrapper:hover{
+  filter: brightness(150%);
+} */
+.coral-bg:after{
+  content: '';
   position: absolute;
   top: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
+  background-image: url(../images/newgrid-bg.svg);
   height: 100%;
-  opacity: .4;
+  z-index: 0;
+  opacity: .1;
 }
-
 
 .coral-wrapper .title {
   margin: 0;
@@ -1707,3 +1714,6 @@ span.color_text {
     padding-bottom: 20px;
   }
 }
+
+
+

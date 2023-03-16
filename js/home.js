@@ -173,12 +173,28 @@ jQuery(document).ready(function () {
     + ev.clientX + 'px '
     + ev.clientY + 'px, '
     + 'rgb(255 241 227) -90%, '
-    + 'rgb(239 112 101) 39.27%)';
+    + 'rgb(239 112 101) 39.27%)'
+    ;
+});
+$(".coral-wrapper").mouseout(function(){
+  $(".coral-wrapper").css("background", "linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%)");
+});
+
+
+
+// var horizontal_scroll_tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".wrapper",
+//     scrub: 0.3,
+//     start: "bottom bottom",
+//     end: "bottom left",
+//   }})
+// horizontal_scroll_tl
+//   .to(".marquee", {xPercent: -66.666,})
+
+
 
 });
-  
-});
-
 
 
 

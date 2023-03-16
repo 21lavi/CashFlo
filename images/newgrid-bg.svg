@@ -1,0 +1,88 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1346 367" width="1346" height="367">
+	<title>newgrid-bg-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h1396v408h-1396z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m1440 0h-1440v425h1440z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-width: 1.6 } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<g id="Layer">
+					<path id="Layer" class="s0" d="m0 364.3h1439.6"/>
+					<path id="Layer" class="s0" d="m0 364.3h1439.6"/>
+					<path id="Layer" class="s0" d="m0 317.4h1439.6"/>
+					<path id="Layer" class="s0" d="m0 317.4h1439.6"/>
+					<path id="Layer" class="s0" d="m0 270.6h1439.6"/>
+					<path id="Layer" class="s0" d="m0 270.6h1439.6"/>
+					<path id="Layer" class="s0" d="m0 223.7h1439.6"/>
+					<path id="Layer" class="s0" d="m0 223.7h1439.6"/>
+					<path id="Layer" class="s0" d="m0 176.8h1439.6"/>
+					<path id="Layer" class="s0" d="m0 176.8h1439.6"/>
+					<path id="Layer" class="s0" d="m0 129.9h1439.6"/>
+					<path id="Layer" class="s0" d="m0 129.9h1439.6"/>
+					<path id="Layer" class="s0" d="m0 83.1h1439.6"/>
+					<path id="Layer" class="s0" d="m0 83.1h1439.6"/>
+					<path id="Layer" class="s0" d="m0 36.2h1439.6"/>
+					<path id="Layer" class="s0" d="m0 36.2h1439.6"/>
+					<path id="Layer" class="s0" d="m45.8 0v425"/>
+					<path id="Layer" class="s0" d="m45.8 0v425"/>
+					<path id="Layer" class="s0" d="m100.1 0v425"/>
+					<path id="Layer" class="s0" d="m100.1 0v425"/>
+					<path id="Layer" class="s0" d="m154.4 0v425"/>
+					<path id="Layer" class="s0" d="m154.4 0v425"/>
+					<path id="Layer" class="s0" d="m208.8 0v425"/>
+					<path id="Layer" class="s0" d="m208.8 0v425"/>
+					<path id="Layer" class="s0" d="m263.1 0v425"/>
+					<path id="Layer" class="s0" d="m263.1 0v425"/>
+					<path id="Layer" class="s0" d="m317.4 0v425"/>
+					<path id="Layer" class="s0" d="m317.4 0v425"/>
+					<path id="Layer" class="s0" d="m371.7 0v425"/>
+					<path id="Layer" class="s0" d="m371.7 0v425"/>
+					<path id="Layer" class="s0" d="m1071.6 0v425"/>
+					<path id="Layer" class="s0" d="m1071.6 0v425"/>
+					<path id="Layer" class="s0" d="m1125.9 0v425"/>
+					<path id="Layer" class="s0" d="m1125.9 0v425"/>
+					<path id="Layer" class="s0" d="m1180.2 0v425"/>
+					<path id="Layer" class="s0" d="m1180.2 0v425"/>
+					<path id="Layer" class="s0" d="m1234.5 0v425"/>
+					<path id="Layer" class="s0" d="m1234.5 0v425"/>
+					<path id="Layer" class="s0" d="m1288.8 0v425"/>
+					<path id="Layer" class="s0" d="m1288.8 0v425"/>
+					<path id="Layer" class="s0" d="m1343.2 0v425"/>
+					<path id="Layer" class="s0" d="m1343.2 0v425"/>
+					<path id="Layer" class="s0" d="m427-45v515"/>
+					<path id="Layer" class="s0" d="m427-45v515"/>
+					<path id="Layer" class="s0" d="m481.3-45v515"/>
+					<path id="Layer" class="s0" d="m481.3-45v515"/>
+					<path id="Layer" class="s0" d="m532.5-45v515"/>
+					<path id="Layer" class="s0" d="m532.5-45v515"/>
+					<path id="Layer" class="s0" d="m586.8-45v515"/>
+					<path id="Layer" class="s0" d="m586.8-45v515"/>
+					<path id="Layer" class="s0" d="m641.1-45v515"/>
+					<path id="Layer" class="s0" d="m641.1-45v515"/>
+					<path id="Layer" class="s0" d="m695.4-45v515"/>
+					<path id="Layer" class="s0" d="m695.4-45v515"/>
+					<path id="Layer" class="s0" d="m749.7-45v515"/>
+					<path id="Layer" class="s0" d="m749.7-45v515"/>
+					<path id="Layer" class="s0" d="m803-45v515"/>
+					<path id="Layer" class="s0" d="m803-45v515"/>
+					<path id="Layer" class="s0" d="m858.4-45v515"/>
+					<path id="Layer" class="s0" d="m858.4-45v515"/>
+					<path id="Layer" class="s0" d="m912.7-45v515"/>
+					<path id="Layer" class="s0" d="m912.7-45v515"/>
+					<path id="Layer" class="s0" d="m967-45v515"/>
+					<path id="Layer" class="s0" d="m967-45v515"/>
+					<path id="Layer" class="s0" d="m1018.2-45v515"/>
+					<path id="Layer" class="s0" d="m1018.2-45v515"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
