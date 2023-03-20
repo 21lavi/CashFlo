@@ -291,17 +291,17 @@ jQuery(document).ready(function () {
     }
   );
 
-  const pinedList = document.querySelector(".pined-list");
-  const pinedInner = document.querySelector(".pined-inner");
+  // const pinedList = document.querySelector(".pined-list");
+  // const pinedInner = document.querySelector(".pined-inner");
 
-  gsap.to(pinedList, {
-    x: -pinedList.clientWidth + pinedInner.clientWidth,
-    scrollTrigger: {
-      trigger: ".pined",
-      start: "center center",
-      end: `+=${pinedList.clientWidth}`,
-      pin: true,
-      scrub: 0.3,
-    },
-  });
+  // gsap.to(pinedList, {
+  //   x: -pinedList.clientWidth + pinedInner.clientWidth,
+  //   scrollTrigger: {
+  //     trigger: ".pined",
+  //     start: "center center",
+  //     end: `+=${pinedList.clientWidth}`,
+  //     pin: true,
+  //     scrub: 0.3,
+  //   },
+  // });
 });

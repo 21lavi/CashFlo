@@ -471,14 +471,14 @@ span.color_text {
   justify-content: center;
 }
 /* marque */
-/* .wrapper {
+.wrapper {
   max-width: 100%;
   display: grid;
   place-items: center;
   overflow: hidden;
-} */
+} 
 
-/* .marquee {
+ .marquee {
   white-space: nowrap;
   transition: all 0.1s ease;
   display: flex;
@@ -489,7 +489,7 @@ span.color_text {
   animation: marquee-move linear infinite;
   -webkit-animation-duration: 40s;
   animation-duration: 40s;
-} */
+} 
 
 .marquee p {
   display: inline-block;
