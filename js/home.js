@@ -1,18 +1,15 @@
 jQuery(document).ready(function () {
-
   let reveal = document.querySelectorAll(".reveal");
 
   reveal.forEach((el) => {
     let headings = el.querySelectorAll(".animated-text");
 
-    let tl = gsap
-      .timeline()
-      .from(headings, {
-        y: -40,
-        stagger: 0.1,
-        opacity: 0,
-        duration: 1,  
-      })        
+    let tl = gsap.timeline().from(headings, {
+      y: -40,
+      stagger: 0.1,
+      opacity: 0,
+      duration: 1,
+    });
 
     ScrollTrigger.create({
       trigger: el,
@@ -21,11 +18,8 @@ jQuery(document).ready(function () {
       markers: false,
       toggleActions: "play none none reverse ",
       animation: tl,
-  
     });
-  
   });
-
 
   $(".slider").slick({
     arrows: false,
@@ -39,78 +33,158 @@ jQuery(document).ready(function () {
     slidesToScroll: 1,
   });
 
-  //ticking machine
-  var percentTime;
-  var tick;
-  var time = 0.1;
-  var progressBarIndex = 0;
+  $(window).width(function () {
+    if ($(window).width() > 768) {
+      //ticking machine
+      var percentTime;
+      var tick;
+      var time = 0.1;
+      var progressBarIndex = 0;
 
-  $(".progressBarContainer .progressBar").each(function (index) {
-    var progress = "<div class='inProgress inProgress" + index + "'></div>";
-    $(this).html(progress);
-  });
-
-  $(".progressBarContainer h3").each(function (index) {
-    jQuery(this).addClass("slideText" + index);
-  });
-
-  $(".progressBarContainer .item").each(function (index) {
-    jQuery(this).addClass("item" + index);
-  });
-
-
-  function startProgressbar() {
-    resetProgressbar();
-    percentTime = 0;
-    tick = setInterval(interval, 10);
-  }
-
-  function interval() {
-    if (
-      $(
-        '.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]'
-      ).attr("aria-hidden") === "true"
-    ) {
-      progressBarIndex = $(
-        '.slider .slick-track div[aria-hidden="false"]'
-      ).data("slickIndex");
-      startProgressbar();
-    } else {
-      percentTime += 1 / (time + 5);
-      $(".inProgress" + progressBarIndex).css({
-        width: percentTime + "%",
+      $(".progressBarContainer .progressBar").each(function (index) {
+        var progress = "<div class='inProgress inProgress" + index + "'></div>";
+        $(this).html(progress);
       });
-      jQuery(".item" + progressBarIndex).addClass("active");
-      
-      if (percentTime >= 100) {
-        $(".single-item").slick("slickNext");
-        progressBarIndex++;
-        if (progressBarIndex > 2) {
-          progressBarIndex = 0;
-        }
-        startProgressbar();
+
+      $(".progressBarContainer h3").each(function (index) {
+        jQuery(this).addClass("slideText" + index);
+      });
+
+      $(".progressBarContainer .item").each(function (index) {
+        jQuery(this).addClass("item" + index);
+      });
+
+      function startProgressbar() {
+        resetProgressbar();
+        percentTime = 0;
+        tick = setInterval(interval, 10);
       }
-    }    
-  }
-  
-  function resetProgressbar() {
-    $(".progressBarContainer .item").each(function (index) {
-      jQuery(this).removeClass('active');
-    });
 
-    $(".inProgress").css({
-      width: 0 + "%",
-    });
-    clearInterval(tick);
-  }
-  startProgressbar();
-  // End ticking machine
+      function interval() {
+        if (
+          $(
+            '.slider .slick-track div[data-slick-index="' +
+              progressBarIndex +
+              '"]'
+          ).attr("aria-hidden") === "true"
+        ) {
+          progressBarIndex = $(
+            '.slider .slick-track div[aria-hidden="false"]'
+          ).data("slickIndex");
+          startProgressbar();
+        } else {
+          percentTime += 1 / (time + 5);
+          $(".inProgress" + progressBarIndex).css({
+            height: percentTime + "%",
+          });
+          jQuery(".item" + progressBarIndex).addClass("active");
 
-  $(".item").click(function () {
-    clearInterval(tick);
-    var goToThisIndex = $(this).find("span").data("slickIndex");
-    $(".single-item").slick("slickGoTo", goToThisIndex, false);
-    startProgressbar();
+          if (percentTime >= 100) {
+            $(".single-item").slick("slickNext");
+            progressBarIndex++;
+            if (progressBarIndex > 2) {
+              progressBarIndex = 0;
+            }
+            startProgressbar();
+          }
+        }
+      }
+
+      function resetProgressbar() {
+        $(".progressBarContainer .item").each(function (index) {
+          jQuery(this).removeClass("active");
+        });
+
+        $(".inProgress").css({
+          height: 0 + "%",
+        });
+        clearInterval(tick);
+      }
+      startProgressbar();
+      // End ticking machine
+
+      $(".item").click(function () {
+        clearInterval(tick);
+        var goToThisIndex = $(this).find("span").data("slickIndex");
+        $(".single-item").slick("slickGoTo", goToThisIndex, false);
+        startProgressbar();
+      });
+    } else {
+      //ticking machine
+      var percentTime;
+      var tick;
+      var time = 0.1;
+      var progressBarIndex = 0;
+
+      $(".progressBarContainer .progressBar").each(function (index) {
+        var progress = "<div class='inProgress inProgress" + index + "'></div>";
+        $(this).html(progress);
+      });
+
+      $(".progressBarContainer h3").each(function (index) {
+        jQuery(this).addClass("slideText" + index);
+      });
+
+      $(".progressBarContainer .item").each(function (index) {
+        jQuery(this).addClass("item" + index);
+      });
+
+      function startProgressbar() {
+        resetProgressbar();
+        percentTime = 0;
+        tick = setInterval(interval, 10);
+      }
+
+      function interval() {
+        if (
+          $(
+            '.slider .slick-track div[data-slick-index="' +
+              progressBarIndex +
+              '"]'
+          ).attr("aria-hidden") === "true"
+        ) {
+          progressBarIndex = $(
+            '.slider .slick-track div[aria-hidden="false"]'
+          ).data("slickIndex");
+          startProgressbar();
+        } else {
+          percentTime += 1 / (time + 5);
+          $(".inProgress" + progressBarIndex).css({
+            width: percentTime + "%",
+          });
+          jQuery(".item" + progressBarIndex).addClass("active");
+
+          if (percentTime >= 100) {
+            $(".single-item").slick("slickNext");
+            progressBarIndex++;
+            if (progressBarIndex > 2) {
+              progressBarIndex = 0;
+            }
+            startProgressbar();
+          }
+        }
+      }
+
+      function resetProgressbar() {
+        $(".progressBarContainer .item").each(function (index) {
+          jQuery(this).removeClass("active");
+        });
+
+        $(".inProgress").css({
+          width: 0 + "%",
+        });
+        clearInterval(tick);
+      }
+      startProgressbar();
+      // End ticking machine
+
+      $(".item").click(function () {
+        clearInterval(tick);
+        var goToThisIndex = $(this).find("span").data("slickIndex");
+        $(".single-item").slick("slickGoTo", goToThisIndex, false);
+        startProgressbar();
+      });
+    }
   });
 
   $(".testimonial_slider").slick({
@@ -124,16 +198,7 @@ jQuery(document).ready(function () {
     fade: true,
     autoplay: true,
   });
-  $(".technique-slider").slick({
-    slidesToShow: 1,
-    infinite:true,
-    dots:true,
-    arrows:false,
-    variableWidth: false,
-    slidesToScroll: 1,
-    fade: true,
-    autoplay:true
-   });
+
   // cashflo advantage slider
   $(".advantage-slider").slick({
     arrows: true,
@@ -163,41 +228,80 @@ jQuery(document).ready(function () {
     ],
   });
 
-  
+  $(".coral-wrapper").mousemove(function (ev) {
+    var gradient = this;
+    gradient.style.background =
+      "radial-gradient( circle at " +
+      ev.clientX +
+      "px " +
+      ev.clientY +
+      "px, " +
+      "rgb(255 241 227) -90%, " +
+      "rgb(239 112 101) 39.27%)";
+  });
+  $(".coral-wrapper").mouseout(function () {
+    $(".coral-wrapper").css(
+      "background",
+      "linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%)"
+    );
+  });
 
+  // var horizontal_scroll_tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".wrapper",
+  //     scrub: 0.3,
+  //     start: "bottom bottom",
+  //     end: "bottom left",
+  //   }})
+  // horizontal_scroll_tl
+  //   .to(".marquee", {xPercent: -66.666,})
+  $(".line-highlight").hover(
+    function () {
+      var date = $(this).data("date");
+      var x = parseFloat($(this).attr("x"));
+      var y = parseFloat($(this).attr("y"));
+      var width = parseFloat($(this).attr("width"));
+      var height = parseFloat($(this).attr("height"));
 
+      $('.line-highlight[data-date="' + date + '"]').addClass("highlight");
+      $(this).addClass("highlight-hover");
 
-  $(".coral-wrapper").mousemove(function(ev) {
-    var gradient =this;
-    gradient.style.background = 'radial-gradient( circle at ' 
-    + ev.clientX + 'px '
-    + ev.clientY + 'px, '
-    + 'rgb(255 241 227) -90%, '
-    + 'rgb(239 112 101) 39.27%)'
-    ;
+      $(".line-highlight")
+        .not('.highlight-hover, [data-date="' + date + '"]')
+        .each(function () {
+          var rectX = parseFloat($(this).attr("x"));
+          var rectY = parseFloat($(this).attr("y"));
+          var rectWidth = parseFloat($(this).attr("width"));
+          var rectHeight = parseFloat($(this).attr("height"));
+          console.log(width, "width");
+          console.log(height, "width");
+          if (rectX + rectWidth == x && rectY == y) {
+            $(this).addClass("highlight");
+          } else if (rectX == x + width && rectY == y) {
+            $(this).addClass("highlight");
+          } else if (rectY + rectHeight == y && rectX == x) {
+            $(this).addClass("highlight");
+          } else if (rectY == y + height && rectX == x) {
+            $(this).addClass("highlight");
+          }
+        });
+    },
+    function () {
+      $(".line-highlight").removeClass("highlight highlight-hover");
+    }
+  );
+
+  const pinedList = document.querySelector(".pined-list");
+  const pinedInner = document.querySelector(".pined-inner");
+
+  gsap.to(pinedList, {
+    x: -pinedList.clientWidth + pinedInner.clientWidth,
+    scrollTrigger: {
+      trigger: ".pined",
+      start: "center center",
+      end: `+=${pinedList.clientWidth}`,
+      pin: true,
+      scrub: 0.3,
+    },
+  });
 });
-$(".coral-wrapper").mouseout(function(){
-  $(".coral-wrapper").css("background", "linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%)");
-});
-
-
-
-// var horizontal_scroll_tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".wrapper",
-//     scrub: 0.3,
-//     start: "bottom bottom",
-//     end: "bottom left",
-//   }})
-// horizontal_scroll_tl
-//   .to(".marquee", {xPercent: -66.666,})
-
-
-
-});
-
-
-
-
-
-
