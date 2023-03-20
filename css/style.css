@@ -161,9 +161,9 @@ body {
 .brand-logo p {
   font-weight: 600;
   font-size: 16px;
-  text-align: center;
   letter-spacing: 0.01em;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
 }
 .logo-team {
   display: flex;
@@ -183,13 +183,13 @@ body {
   padding-top: 145px;
 }
 .automation_slider {
-  padding: 173px 0 128px;
+  padding: 100px 0 108px;
   background-color: #0d0d0d;
   position: relative;
 }
 .automation_slider h2 {
   text-align: center;
-  margin: 0 0 113px;
+  margin: 0 0 90px;
   letter-spacing: -0.01em;
 }
 
@@ -210,64 +210,87 @@ body {
   margin: 0 auto;
 }
 .progressBarContainer .item {
-  display: block;
-  width: 16.66%;
+  display: flex;
   cursor: pointer;
   color: white;
-  padding: 0 20px;
-  text-align: left;
-  min-height: 190px;
   transition: all 0.3s;
+  text-align: left;
+  margin-bottom: 40px;
 }
-.progressBarContainer .item.active {
-  width: 21%;
+.progressBarContainer .item:last-child{
+  margin-bottom: 0;
 }
+
 .progressBarContainer span {
   display: block;
-  font-style: italic;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 22px;
   transition: all 0.3s;
-  font-family: "Reckless Neue";
+  color: rgba(255, 255, 255, 0.4);
 }
 .progressBarContainer h3 {
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.6;
-  margin: 35px 0 0;
+  font-size: 16px;
+  font-weight: 400; 
+  height: 0;
+  opacity: 0;
+  margin: 0;
   transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.7);
 }
 .progressBarContainer div:last-child {
   margin-right: 0;
 }
-.progressBarContainer {
-  padding: 132px 0px 0;
-  display: flex;
-  margin: 0 -20px;
-}
+
 .progressBarContainer div span.progressBar {
   width: 100%;
-  height: 3px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  position: relative;
 }
-
+.progressBarContainer .item div:first-child {
+  width: 7px;
+  margin-right: 25px;
+}
 .progressBarContainer div span.progressBar .inProgress {
   background-color: var(--secondaryColor);
-  width: 0%;
-  height: 5px;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+    top: 0;
+    border-radius: 10px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
 }
 .slick-track {
   display: flex;
 }
-.progressBarContainer .item.active span,
-.progressBarContainer .item.active h3 {
+.progressBarContainer .item.active span{
   font-size: 30px;
+  color: var(--white);
+}
+.progressBarContainer .item.active h3 {
   opacity: 1;
+  margin: 15px 0 0;
+  height: auto;
 }
 .progressBarContainer .item.active span.progressBar {
-  height: 5px;
+  height: 100%;
+}
+.financing-slider-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.financing-slider-nav {
+  width: 350px;
+}
+
+.financing-slider {
+  width: calc(100% - 350px);
 }
 .integration-wrapper {
   background: radial-gradient(
@@ -279,27 +302,14 @@ body {
   background-color: #0d0d0d;
   position: relative;
 }
-.integration-wrapper:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(13, 13, 13, 0.164) 0%,
-    rgba(13, 13, 13, 0.82) 100%
-  );
-  top: 0;
-  left: 0;
-}
+
 .logo-col {
   width: 25%;
   padding: 0 15px;
 }
 .logo-col .logo-inner {
-  width: 240px;
-  height: 240px;
+  width: 170px;
+  height:170px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -307,51 +317,37 @@ body {
   margin: 0 auto;
   cursor: pointer;
   transition: all 0.3s;
-  background: #242424;
-  border: 2px solid rgba(255, 255, 255, 0.15);
 }
-.logo-col .logo-inner:hover {
-  border-color: rgb(255 255 255 / 64%);
-}
-
-.logo-inner img {
+.logo-col .logo-inner img {
   width: 100%;
-  max-width: 120px;
-  opacity: 0.5;
-  transition: all 0.3s;
-}
-.logo-col .logo-inner:hover img {
-  opacity: 1;
 }
 .center-text {
   text-align: center;
   margin: 0 auto;
-  padding: 70px 0;
+  padding:100px 80px;
   position: relative;
   z-index: 1;
 }
 .center-text .title {
   color: var(--white);
-  margin: 0px 0 20px;
+  margin: 0px 0;
 }
-.center-text p {
-  color: var(--white);
-  opacity: 0.5;
-  letter-spacing: 0.01em;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
-  margin: 0;
+.circle-logo-main {
+  max-width: 880px;
+  margin: 0 auto;
 }
-/* Client review section */
 .client_review {
-  padding: 100px 0px;
+  padding: 100px 0px 50px;
   overflow: hidden;
   background-color: var(--white);
 }
 .clinet_review_title h2 {
   text-align: center;
-  margin-bottom: 45px;
+  margin: 0;
+}
+.clinet_review_title {
+  text-align: center;
+  padding-bottom: 70px;
 }
 span.color_text {
   color: var(--secondaryColor);
@@ -475,14 +471,14 @@ span.color_text {
   justify-content: center;
 }
 /* marque */
-.wrapper {
+/* .wrapper {
   max-width: 100%;
   display: grid;
   place-items: center;
   overflow: hidden;
-}
+} */
 
-.marquee {
+/* .marquee {
   white-space: nowrap;
   transition: all 0.1s ease;
   display: flex;
@@ -493,7 +489,7 @@ span.color_text {
   animation: marquee-move linear infinite;
   -webkit-animation-duration: 40s;
   animation-duration: 40s;
-}
+} */
 
 .marquee p {
   display: inline-block;
@@ -504,6 +500,7 @@ span.color_text {
   margin: 0;
   transition: all 1s ease;
   padding-top: 40px;
+  white-space: nowrap;
 }
 .marquee p span {
   padding-right: 20px;
@@ -946,97 +943,114 @@ span.color_text {
 }
 
 .col-box {
-  width: 50%;
+  width: 33.33%;
   padding: 0 15px;
 }
-.slick-current .col-box-inner {
-  animation-name: moveToLeft;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-}
 
-@keyframes moveToLeft {
-  0% {
-    transform: translateX(60px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 
 .trust-cashflo {
   background: #0d0d0d;
-  padding: 125px 0 100px;
+  padding:139px 0 70px;
 }
-.trust-cashflo .title {
+.trust-box img{
+max-width:114px
+}
+.trust-box h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
   color: var(--white);
-  margin: 0 0 16px;
-}
-
-.trust-cashflo p {
-  font-weight: 200;
-  font-size: 32px;
-  letter-spacing: 0.02em;
-  background: linear-gradient(
-    180deg,
-    rgba(252, 246, 240, 0.65) 0%,
-    rgba(255, 255, 255, 0.65) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
   margin: 0;
+  display: flex;
+  padding: 20px 0px;
+  justify-content: center;
 }
-.trust-cashflo .title {
-  font-weight: 300;
-}
-.logo-block img {
-  max-width: 422px;
-}
-.technique-slider.slick-slider {
-  padding-bottom: 120px;
-  margin: 0;
+.trust-box h3:before, .trust-box h3:after {
+  content: '';
+  width: 30px;
+  height: 54px;
+  top: -15px;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.technique-slider .slick-dots {
+.trust-box p{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  color: var(--white);
+  margin: 0;
+}
+.trust-box h3:before{
+  background-image: url('../images/border-left.png');
+  left: -12px;
+}
+.trust-box h3:after{
+  background-image: url('../images/border-right.png');
+  right: -12px;
+}
+.trust-box {
   text-align: center;
-  padding: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -20px;
 }
-
-.technique-slider .slick-dots li {
-  display: inline-block;
-  padding: 0 12px;
-}
-.technique-slider .slick-dots li button {
-  padding: 0;
-  width: 8px;
-  height: 8px;
-  background: rgba(217, 217, 217, 0.7);
-  border-radius: 50%;
-  margin: 0 auto;
-  font-size: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.technique-slider .slick-dots li button:before {
-  display: none;
-}
-
-.technique-slider .slick-dots li.slick-active button {
-  background: #ef7065;
+.trust-cashflo .col-box {
+  margin-bottom: 90px;
 }
 .slick-list {
   overflow: hidden;
 }
-.trust-cashflo .col-box-inner {
-  margin: 0 -15px;
+.container-grid svg rect:hover {
+  stroke-width: 0.1px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 700;
+  transition: all.3s;
+  }
+  .container-grid  rect {
+    fill: transparent;
+    stroke: #00000014;
+}
+.container-grid {
+  background: linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%);
+  width: 100%;
+  height: 400px;
+}
+.container-grid svg {
+  position: relative;
+  z-index: 2;
+}
+
+
+.container-grid {
+  width: 700px;
+  height: 500px;
+  border: 1px solid #ccc;
+}
+
+
+.line-highlight:hover {
+  stroke: #ccc;
+}
+
+.line-highlight.highlight {
+  fill: transparent;
+  stroke: #fff;
+}
+
+.line-highlight.highlight-hover {
+  stroke: #fff;
+}
+
+.pined {
+  overflow: hidden;
+}
+.pined-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+.pined-list{
+  padding: 0 50px 0 200px;
 }
 @media (max-width: 1599px) {
   .advantage-slider .item:hover h3 {
@@ -1059,33 +1073,34 @@ span.color_text {
   }
 
   .automation_slider {
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   .automation_slider h2 {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   .play-button {
     width: 70px;
     height: 70px;
 }
-  .progressBarContainer h3 {
-    font-size: 16px;
-    margin-top: 25px;
+.progressBarContainer .item.active span{
+  font-size: 22px;
+}
+.progressBarContainer span {
+  font-size: 18px;
+}
+  .progressBarContainer .item h3 {
+    font-size: 14px;
   }
-  .progressBarContainer .item.active span,
-  .progressBarContainer .item.active h3 {
-    font-size: 25px;
-  }
-  .progressBarContainer {
-    padding-top: 70px;
-    margin: 0 auto;
-  }
-
   .process_wrap {
     padding: 80px 0 40px;
   }
-
+  .financing-slider-nav {
+    width: 200px;
+}
+.financing-slider {
+  width: calc(100% - 200px);
+}
   .process_wrap .title {
     margin-bottom: 50px;
   }
@@ -1102,7 +1117,10 @@ span.color_text {
   .product-box a {
     font-size: 18px;
   }
-
+  .trust-box h3 {
+    font-size: 20px;
+    line-height: 23px;
+}
   .coral-wrapper {
     padding: 100px 0;
   }
@@ -1119,9 +1137,6 @@ span.color_text {
     padding: 80px 0;
   }
 
-  .clinet_review_title h2 {
-    margin-top: 0;
-  }
   .advantage-slider .item h3 {
     font-size: 28px;
   }
@@ -1174,7 +1189,7 @@ span.color_text {
     font-size: 18px;
   }
   .trust-cashflo {
-    padding: 80px 0;
+    padding:80px 0 20px;
   }
 
   .power_business {
@@ -1185,9 +1200,6 @@ span.color_text {
     font-size: 100px;
   }
 
-  .trust-cashflo p {
-    font-size: 28px;
-  }
 }
 @media (max-width: 991px) {
   .logo-box {
@@ -1217,12 +1229,12 @@ span.color_text {
   .inner-box {
     padding: 0 15px;
   }
-
+/* 
   .find-solution:nth-child(3),
   .find-solution,
   .find-solution:nth-child(4) {
     width: 40%;
-  }
+  } */
 
   .query-row {
     flex-wrap: wrap;
@@ -1273,35 +1285,28 @@ span.color_text {
   .advantage-slider .item h3 {
     font-size: 25px;
   }
-
   .item-inner {
     min-height: 380px;
   }
-  .progressBarContainer .item.active span,
-  .progressBarContainer .item.active h3 {
-    font-size: 20px;
-  }
-  .progressBarContainer .item {
-    min-height: 125px;
-  }
   .logo-col .logo-inner {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
-
-  .logo-inner img {
-    max-width: 100px;
-  }
+  .circle-logo-main {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
   .center-text {
     padding: 40px 0;
   }
   .integration-wrapper {
-    padding: 100px 0 120px;
+    padding:80px 0 120px;
     overflow: hidden;
   }
-  .logo-block img {
-    max-width: 300px;
-  }
+  .automation_slider .item img {
+    width: 100%;
+}
+
   .circle-logo-main .row-wrap {
     flex-wrap: nowrap;
     justify-content: center;
@@ -1334,7 +1339,7 @@ span.color_text {
     padding: 50px 0 70px;
   }
   .brand-logo {
-    padding: 10px 0;
+    padding: 50px 0 10px;
   }
   .messageWrapper {
     width: 90% !important;
@@ -1361,11 +1366,6 @@ span.color_text {
     border: none;
     border-radius: 0;
   }
-
-  .logo-team {
-    padding-top: 30px;
-  }
-
   .automation_slider {
     padding: 60px 0;
   }
@@ -1376,13 +1376,6 @@ span.color_text {
   .automation_slider .item img {
     width: 100%;
   }
-
-  .progressBarContainer {
-    padding: 40px 0 0;
-    overflow: auto;
-    white-space: nowrap;
-  }
-
   .process_wrap {
     padding: 60px 0 40px;
   }
@@ -1425,9 +1418,6 @@ span.color_text {
     padding: 60px 0;
   }
 
-  .clinet_review_title h2 {
-    margin-bottom: 50px;
-  }
 
   .review_text {
     font-size: 16px;
@@ -1455,11 +1445,6 @@ span.color_text {
     font-size: 14px;
     line-height: 1.4;
   }
-
-  .center-text .title {
-    margin: 0px 0 10px;
-  }
-
   .icon-block img {
     width: 33px;
   }
@@ -1505,21 +1490,11 @@ span.color_text {
     width: 100px;
     height: 100px;
   }
-  .logo-inner img {
-    max-width: 80px;
-  }
+
   .integration-wrapper {
     padding: 50px 0px 80px;
   }
-  .logo-block {
-    margin-bottom: 20px;
-  }
-  .trust-cashflo p {
-    font-size: 24px;
-  }
-  .technique-slider.slick-slider {
-    padding-bottom: 50px;
-  }
+ 
   .inner-box:after {
     top: 10%;
   }
@@ -1529,10 +1504,60 @@ span.color_text {
   .coral-wrapper .title br {
     display: none;
   }
-  .trust-cashflo .col-box-inner {
-    margin: 0 auto;
-    padding: 0 10px;
-  }
+  .financing-slider-nav {
+    width: 100%;
+    order: 2;
+    padding-top: 30px;
+}
+
+.financing-slider {
+    width: 100%;
+}
+
+.progressBarContainer {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.financing-slider-main {
+    flex-wrap: wrap;
+}
+
+.progressBarContainer .item {
+    display: block;
+    margin: 0;
+    padding: 0 6px;
+}
+
+.progressBarContainer .item div:first-child {
+    width: 100%;
+}
+
+.progressBarContainer div span.progressBar .inProgress {
+  height: 5px;
+  width: 0%;
+  margin: 0;
+  border-radius: 10px;
+}
+.progressBarContainer div span.progressBar {
+  width: 100%;
+  height: 3px;
+}
+.progressBarContainer .item.active span.progressBar {
+  height: 5px;
+}
+.progressBarContainer .item h3 {
+  height: auto;
+  opacity: 1;
+  white-space: normal;
+  width: 170px;
+  font-size: 12px;
+  margin-top: 0;
+}
+.progressBarContainer .item.active span {
+  font-size: 18px;
+}
 }
 @media (max-width: 575px) {
   .messageWrapper {
@@ -1553,16 +1578,14 @@ span.color_text {
 
   .progressBarContainer span {
     font-size: 13px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .progressBarContainer h3 {
     font-size: 14px;
     margin: 12px 0;
   }
-  .progressBarContainer .item.active {
-    width: auto;
-  }
+
   .title {
     font-size: 28px;
   }
@@ -1600,10 +1623,6 @@ span.color_text {
 
   .client_review {
     padding: 40px 0;
-  }
-
-  .clinet_review_title h2 {
-    margin-bottom: 20px;
   }
 
   .testimonial_image {
@@ -1651,9 +1670,7 @@ span.color_text {
     padding: 8px 7px;
     margin-bottom: 12px;
 }
-  .technique-slider .slick-dots {
-    bottom: -30px;
-}
+
   .find-solution h4 {
     margin-bottom: 15px;
   }
@@ -1699,21 +1716,20 @@ span.color_text {
   .product-box {
     padding: 0;
   }
-  .progressBarContainer .item.active span,
-  .progressBarContainer .item.active h3 {
-    font-size: 16px;
-  }
   .logo-col {
     width: 50%;
     margin: 10px 0;
   }
-  .trust-cashflo p {
-    font-size: 20px;
-  }
-  .technique-slider.slick-slider {
-    padding-bottom: 20px;
-  }
+  .logo-col .logo-inner {
+    width: 60px;
+    height: 60px;
 }
+.circle-logo-main {
+  margin-bottom: 0;
+}
+}
+
+
 
 
 
