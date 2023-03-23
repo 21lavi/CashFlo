@@ -209,7 +209,7 @@ body {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(0); }
   }
-/* .logo-team:after {
+.logo-team:after {
   content: "";
   position: absolute;
   display: block;
@@ -225,7 +225,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-} */
+}
 .logo-box {
   padding: 0 10px;
 }
