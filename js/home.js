@@ -305,3 +305,43 @@ jQuery(document).ready(function () {
   //   },
   // });
 });
+
+
+
+
+
+// Motion animation
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const twoWayCurve = document.querySelector('#two_way_curve');
+  const threeWayCurve = document.querySelector('#three_way_curve');
+  
+// Set the initial dash offset to the total length of the path
+const totalLengthTwoWay = twoWayCurve.getTotalLength();
+const totalLengthThreeWay = threeWayCurve.getTotalLength();
+
+// Set up the animation
+gsap.set([twoWayCurve, threeWayCurve], {
+  strokeDasharray: totalLengthTwoWay,
+  strokeDashoffset: totalLengthTwoWay,
+  'stroke-dashoffset': -totalLengthTwoWay
+});
+
+gsap.to(twoWayCurve, {
+  strokeDashoffset: -totalLengthTwoWay,
+  duration: 7,
+  repeat: -1,
+  ease: 'none',
+  delay: 1,
+});
+
+gsap.to(threeWayCurve, {
+  strokeDashoffset: -totalLengthThreeWay,
+  duration: 7,
+  repeat: -1,
+  ease: 'none',
+  delay: 3.5, 
+});
+
+});
