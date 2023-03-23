@@ -198,6 +198,17 @@ jQuery(document).ready(function () {
     fade: true,
     autoplay: true,
   });
+  $(".award-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 1,
+    variableWidth: false,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true,
+  });
 
   // cashflo advantage slider
   $(".advantage-slider").slick({
