@@ -272,6 +272,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 0;
+  height: 100%;
 }
 
 .automation_slider .main-container {
@@ -507,11 +508,11 @@ body {
   overflow: hidden;
   background-color: var(--white);
 }
-.clinet_review_title h2 {
+.client_review_title h2 {
   text-align: center;
   margin: 0;
 }
-.clinet_review_title {
+.client_review_title {
   text-align: center;
   padding-bottom: 30px;
 }
@@ -526,7 +527,7 @@ span.color_text {
   border-radius: 30px;
   overflow: hidden;
 }
-.testimonail_content {
+.testimonial_content {
   padding: 20px 60px;  
 }
 .testimonial_image img {
@@ -549,7 +550,7 @@ span.color_text {
   font-weight: 500;
   margin: 0;
 }
-.slick-current .testimonail_content {
+.slick-current .testimonial_content {
   animation-name: move;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -831,7 +832,7 @@ span.color_text {
 
 .inner-box h2 {
   letter-spacing: -0.02em;
-  font-size: 65px;
+  font-size: 60px;
   margin: 0;
   font-weight: 500;
 }
@@ -840,7 +841,7 @@ span.color_text {
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.01em;
-  margin-bottom: 0;
+  margin:12px 0 0;
 }
 .inner-box {
   color: var(--white);
@@ -954,10 +955,30 @@ span.color_text {
   width: 150px;
   height: 125px;
   padding: 16px;
+  position: relative;
+  cursor: pointer;
 }
 .bank-logo img {
   max-width: 100%;
   max-height: 100%;
+}
+.visible-logo {
+  transition: all .3s;
+}
+
+.hover-logo {
+  position: absolute;
+  max-width: 120px;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.bank-logo:hover .visible-logo {
+  opacity: 0;
+}
+
+.bank-logo:hover .hover-logo {
+  opacity: 1;
 }
 .connect-erp .title {
   margin: 0 auto 50px;
@@ -1011,21 +1032,13 @@ span.color_text {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  padding: 92px 0 68px;
 }
-.trust-block .main-container {
-  height: 100%;
-  position: relative;
-  min-height: 832px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .trust-block .title {
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 91px;
   color: #fff;
   text-align: center;
+  margin: 0 0 20px;
 }
 .blok-box {
   position: absolute;
@@ -1315,9 +1328,7 @@ span.color_text {
   background: #0d0d0d;
   padding: 125px 0 220px;
   position: relative;
-  background-image: url("../images/trust-slide-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
 }
 .trust-cashflo .slick-dots {
   padding: 0;
@@ -1328,7 +1339,10 @@ span.color_text {
   right: 0;
   bottom: 90px;
 }
-
+.trust-cashflo .bg-svg svg {
+  height: 100%;
+  width: 100%;
+}
 .trust-cashflo .slick-dots li {
   display: inline-block;
   margin: 0 12px;
@@ -1519,7 +1533,7 @@ span.color_text {
     font-size: 18px;
   }
 
-  .testimonail_content {
+  .testimonial_content {
     padding: 50px 40px;
   }
   .testimonial_slider .slick-dots {
@@ -1554,7 +1568,7 @@ span.color_text {
   .marquee p {
     font-size: 100px;
   }
-  .clinet_review_title {
+  .client_review_title {
     padding-bottom: 40px;
   }
   .variance-list ul li {
@@ -1809,10 +1823,7 @@ span.color_text {
   .parameters-col ul li:first-child {
     display: block;
 }
-  .trust-block .title {
-    font-size: 60px;
-    line-height: 70px;
-  }
+
 }
 @media (max-width: 767px) {
   .video_wrapper,
@@ -1926,7 +1937,7 @@ span.color_text {
     font-size: 16px;
   }
 
-  .testimonail_content {
+  .testimonial_content {
     padding: 30px 20px;
   }
 
@@ -2178,7 +2189,7 @@ span.color_text {
     flex-wrap: wrap;
   }
 
-  .testimonail_content {
+  .testimonial_content {
     width: 100%;
     order: 1;
   }
@@ -2286,10 +2297,6 @@ span.color_text {
     font-size: 14px;
 }
 
-.trust-block .title {
-    font-size: 40px;
-    line-height: 1.4;
-}
 
 .blok-box:nth-child(4) h2 {
     font-size: 22px;
