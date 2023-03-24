@@ -9,8 +9,18 @@ jQuery(document).ready(function () {
       stagger: 0.1,
       opacity: 0,
       duration: 1,
+      speed: 400,
+      
     });
-
+    if (window.innerWidth < 768) {
+      ScrollTrigger.create({
+        trigger: el,
+        start: "top 80%",
+        end: "top 40%",
+        markers: false,
+        animation: tl,
+      });
+    }
     ScrollTrigger.create({
       trigger: el,
       start: "center 100%",
@@ -191,34 +201,38 @@ jQuery(document).ready(function () {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplaySpeed: 6000,
     arrows: false,
     slidesToShow: 1,
     variableWidth: false,
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
+    pauseOnHover: false,
   });
   $(".award-slider").slick({
     dots: true,
     infinite: true,
     speed: 500,
+    autoplaySpeed: 6000,
     arrows: false,
     slidesToShow: 1,
     variableWidth: false,
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
+    pauseOnHover: false,
   });
 
   // cashflo advantage slider
   $(".advantage-slider").slick({
     arrows: true,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     centerMode: true,
     centerPadding: "190px",
     speed: 900,
-    infinite: false,
+    infinite: true,
     cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -301,20 +315,6 @@ jQuery(document).ready(function () {
       $(".line-highlight").removeClass("highlight highlight-hover");
     }
   );
-
-  // const pinedList = document.querySelector(".pined-list");
-  // const pinedInner = document.querySelector(".pined-inner");
-
-  // gsap.to(pinedList, {
-  //   x: -pinedList.clientWidth + pinedInner.clientWidth,
-  //   scrollTrigger: {
-  //     trigger: ".pined",
-  //     start: "center center",
-  //     end: `+=${pinedList.clientWidth}`,
-  //     pin: true,
-  //     scrub: 0.3,
-  //   },
-  // });
 });
 
 
