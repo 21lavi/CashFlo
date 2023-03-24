@@ -181,16 +181,11 @@ body {
   place-items: center;
   overflow: hidden;
 }
-.logo-box img {
-  padding: 0 6px;
-  min-width: 95px;
-  max-height: 40px;
-}
+
 .logo-team .marquee-left .row-wrap {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 .marquee-left {
   flex-wrap: nowrap;
@@ -201,23 +196,22 @@ body {
   -webkit-animation-duration: 40s;
   animation-duration: 40s;
 }
-
-.logo-team:after {
+.logo-team:after, .logo-team:before {
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: 180px;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    #ffffff 2.05%,
-    rgba(255, 255, 255, 0) 51.28%,
-    #ffffff 96.57%
-  );
   top: 0;
+}
+.logo-team:after { 
+  background: linear-gradient( 90deg, #ffffff 2.05%, rgba(255, 255, 255, 0) 100.28%, #ffffff 96.57% );
   left: 0;
+}
+.logo-team:before {
+  background: linear-gradient( -90deg, #ffffff 2.05%, rgba(255, 255, 255, 0) 100.28%, #ffffff 96.57% );
   right: 0;
-  margin: 0 auto;
+  z-index: 1;
 }
 .logo-box {
   padding: 0 10px;
@@ -227,8 +221,16 @@ body {
   padding: 0 8px;
   flex-wrap: nowrap;
 }
+.logo-box:hover img {
+  filter: grayscale(0);
+}
 .logo-box img {
   padding: 0 6px;
+  filter: grayscale(1);
+  transition: all .3s;
+  padding: 0 6px;
+  min-width: 85px;
+  max-height: 40px;
 }
 .brand-logo {
   padding-top: 100px;
@@ -528,7 +530,7 @@ span.color_text {
   overflow: hidden;
 }
 .testimonial_content {
-  padding: 20px 60px;  
+  padding: 20px 60px;
 }
 .testimonial_image img {
   border-radius: 0px 16px 16px 0px;
@@ -841,7 +843,7 @@ span.color_text {
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.01em;
-  margin:12px 0 0;
+  margin: 12px 0 0;
 }
 .inner-box {
   color: var(--white);
@@ -957,28 +959,14 @@ span.color_text {
   padding: 16px;
   position: relative;
   cursor: pointer;
+  filter: grayscale(1.3);
 }
 .bank-logo img {
   max-width: 100%;
   max-height: 100%;
 }
-.visible-logo {
-  transition: all .3s;
-}
-
-.hover-logo {
-  position: absolute;
-  max-width: 120px;
-  opacity: 0;
-  transition: all .3s;
-}
-
-.bank-logo:hover .visible-logo {
-  opacity: 0;
-}
-
-.bank-logo:hover .hover-logo {
-  opacity: 1;
+.bank-logo:hover {
+  filter: grayscale(0);
 }
 .connect-erp .title {
   margin: 0 auto 50px;
@@ -1096,8 +1084,7 @@ span.color_text {
 /* Advantage section */
 .advantage-wrap .main-container {
   margin-right: 0;
-  padding: 0;
-  max-width: 93%;
+  padding: 0;  
 }
 .cashflo-advantage {
   background: rgb(236 228 220 / 50%);
@@ -1107,7 +1094,26 @@ span.color_text {
   margin: 0;
   transition: all 0.3s;
 }
-
+.advantage-slider {
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+}
+.advantage-slider-inner {
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  left: 0;
+  position: relative;
+  opacity: 0.8;
+}
+.advantage-slider .item {
+  margin: 0 10px;
+  height: 450px;
+  width: 350px;  
+}
 .advantage-slider .item .item_icon {
   background: #000;
   color: var(--white);
@@ -1163,7 +1169,7 @@ span.color_text {
 }
 
 .advantage-slider .slick-prev {
-  display: none!important;
+  display: none !important;
   background-image: url("../images/arrow-right.svg");
   right: 10%;
   transform: scaleX(-1);
@@ -1198,7 +1204,7 @@ span.color_text {
   margin-top: 0;
 }
 .advantage-wrap {
-  padding: 125px 0px;
+  padding: 80px 0px;
 }
 .advantage-slider .item:hover .item_icon {
   background-color: var(--white);
@@ -1239,8 +1245,7 @@ span.color_text {
   position: static;
   transform: translateY(0);
 }
-.advantage-slider {
-  padding-top: 60px;
+.advantage-slider {  
   position: relative;
 }
 
@@ -1327,7 +1332,7 @@ span.color_text {
 }
 .trust-cashflo {
   background: #0d0d0d;
-  padding: 125px 0 220px;
+  padding: 100px 0 150px;
   position: relative;
   overflow: hidden;
 }
@@ -1348,7 +1353,9 @@ span.color_text {
   display: inline-block;
   margin: 0 12px;
 }
-
+.trust-cashflo .row-wrap {
+  align-items: center;
+}
 .trust-cashflo .slick-dots li button {
   background: rgba(217, 217, 217, 0.7);
   border: none;
@@ -1710,10 +1717,6 @@ span.color_text {
     padding: 0 10px;
   }
 
-  .advantage-wrap .main-container {
-    max-width: 98%;
-  }
-
   .advantage-slider .slick-current .item:after {
     opacity: 1;
   }
@@ -1823,8 +1826,7 @@ span.color_text {
   }
   .parameters-col ul li:first-child {
     display: block;
-}
-
+  }
 }
 @media (max-width: 767px) {
   .video_wrapper,
@@ -2114,10 +2116,10 @@ span.color_text {
 @media (max-width: 575px) {
   .banner-text p {
     font-size: 16px;
-}
-.banner-text .brand-logo p {
-  font-size: 14px;
-}
+  }
+  .banner-text .brand-logo p {
+    font-size: 14px;
+  }
   @keyframes move {
     0% {
       transform: translateY(20px);
@@ -2128,7 +2130,7 @@ span.color_text {
   }
   .progressBarContainer .item {
     width: auto;
-    min-height:inherit;
+    min-height: inherit;
   }
 
   .progressBarContainer span {
@@ -2172,7 +2174,7 @@ span.color_text {
   }
   .text-box .text-button {
     margin-top: 0;
-}
+  }
   .process_wrap .title {
     margin-bottom: 20px;
     padding: 0 15px;
@@ -2288,68 +2290,70 @@ span.color_text {
     line-height: 1.4;
   }
 
-.blok-box {min-width: 135px;height: 128px;}
+  .blok-box {
+    min-width: 135px;
+    height: 128px;
+  }
 
-.blok-box h2 {
+  .blok-box h2 {
     font-size: 25px;
-}
+  }
 
-.blok-box p {
+  .blok-box p {
     font-size: 14px;
-}
+  }
 
-
-.blok-box:nth-child(4) h2 {
+  .blok-box:nth-child(4) h2 {
     font-size: 22px;
-}
+  }
 
-.trust-block .main-container {
+  .trust-block .main-container {
     min-height: 400px;
-}
+  }
 
-.blok-box:nth-child(4) {
+  .blok-box:nth-child(4) {
     left: 5%;
     bottom: 10%;
-}
+  }
 
-.blok-box:nth-child(3) {
+  .blok-box:nth-child(3) {
     right: 5%;
-}
-.parameters-col ul li {
-  margin: 0 5px 10px!important;
-}
-.parameters-col ul {
-  font-size: 14px;
-}
-.button {
-  font-size: 14px;
-}
-.dark .variance-head p {
-  font-size: 16px;
-}
-.advantage-wrap h2.title {
-  padding-right: 120px;
-}
-.advantage-slider .slick-prev {
-  right: 20%;
-}
-.find-solution-btn button {
-  font-size: 14px;
-}
-.center-text {
-  padding: 15px 0 30px;
-}
-.bank-logo img {
-  max-height: 65px;
-  max-width: 90px;
-}
-.bank-logo {
-  min-width: 160px;
-  min-height: 110px;
-}
-.connect-erp {
-  padding-bottom: 50px;
-}
+  }
+  .parameters-col ul li {
+    margin: 0 5px 10px !important;
+  }
+  .parameters-col ul {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 14px;
+  }
+  .dark .variance-head p {
+    font-size: 16px;
+  }
+  .advantage-wrap h2.title {
+    padding-right: 120px;
+  }
+  .advantage-slider .slick-prev {
+    right: 20%;
+  }
+  .find-solution-btn button {
+    font-size: 14px;
+  }
+  .center-text {
+    padding: 15px 0 30px;
+  }
+  .bank-logo img {
+    max-height: 65px;
+    max-width: 90px;
+  }
+  .bank-logo {
+    min-width: 160px;
+    min-height: 110px;
+  }
+  .connect-erp {
+    padding-bottom: 50px;
+  }
 }
 
 
