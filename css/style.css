@@ -1,7 +1,7 @@
 :root {
   --mainBlack: #000;
   --secondaryBlack: #2e3434;
-  --mainHeading: 50px;
+  --mainHeading: 45px;
   --secondaryColor: #ef7065;
   --white: #fff;
 }
@@ -52,7 +52,7 @@ body {
 .title {
   font-weight: 400;
   font-size: var(--mainHeading);
-  line-height: 59px;
+  line-height: 52px;
   letter-spacing: -0.01em;
 }
 .title span {
@@ -168,7 +168,7 @@ body {
 
 .brand-logo p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
@@ -231,7 +231,7 @@ body {
   padding: 0 6px;
 }
 .brand-logo {
-  padding-top: 145px;
+  padding-top: 100px;
 }
 .automation_slider {
   padding: 100px 0 74px;
@@ -240,7 +240,7 @@ body {
 }
 .automation_slider h2 {
   text-align: center;
-  margin: 0 0 80px;
+  margin: 0 0 40px;
   letter-spacing: -0.01em;
 }
 
@@ -264,6 +264,7 @@ body {
 }
 .automation_slider .item img {
   margin: 0 auto;
+  max-width: 100%;
 }
 .automation_slider .bg-svg,
 .trust-cashflo .bg-svg {
@@ -343,11 +344,11 @@ body {
 }
 
 .financing-slider-nav {
-  width: 440px;
+  width: 550px;
 }
 
 .financing-slider {
-  width: calc(100% - 440px);
+  width: calc(100% - 550px);
 }
 .integration-wrapper {
   background: radial-gradient(
@@ -502,7 +503,7 @@ body {
   margin: 0;
 }
 .client_review {
-  padding: 100px 0px 120px;
+  padding: 100px 0px;
   overflow: hidden;
   background-color: var(--white);
 }
@@ -512,34 +513,38 @@ body {
 }
 .clinet_review_title {
   text-align: center;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 span.color_text {
   color: var(--secondaryColor);
 }
 .testimonial_inner_slide {
   display: flex;
+  align-items: center;
   background-color: var(--white);
   box-shadow: 0px 5px 48px 2.4469px rgba(0, 0, 0, 0.07);
   border-radius: 30px;
   overflow: hidden;
 }
 .testimonail_content {
-  padding: 80px 60px;
-  width: 60%;
+  padding: 20px 60px;  
 }
 .testimonial_image img {
   border-radius: 0px 16px 16px 0px;
   display: block;
   margin-right: 0;
   margin-left: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .testimonial_image {
-  width: 40%;
+  width: 300px;
+  min-width: 300px;
   text-align: right;
 }
 .review_text {
-  font-size: 26px;
+  font-size: 25px;
   line-height: 1.4;
   font-weight: 500;
   margin: 0;
@@ -553,15 +558,17 @@ span.color_text {
 .testimonial_bottom_content {
   margin-top: 50px;
 }
-
-.testimonial_bottom_content p {
-  font-size: 24px;
-  margin: 0;
-  line-height: 29px;
+.testimonial_bottom_content p.position {
   font-weight: 300;
 }
+.testimonial_bottom_content p {
+  font-size: 20px;
+  margin: 0;
+  line-height: 26px;
+  font-weight: 500;
+}
 .testimonial_bottom_content .testimonial_name {
-  font-size: 28px;
+  font-size: 25px;
   line-height: 30px;
   color: #ef7267;
   margin: 0 0 15px;
@@ -574,7 +581,7 @@ span.color_text {
 
 .testimonial_slider .slick-dots {
   text-align: center;
-  margin: 40px 0 0;
+  margin: 10px 0 0;
   padding: 0;
 }
 
@@ -944,9 +951,13 @@ span.color_text {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 310px;
-  margin-bottom: 10px;
-  min-height: 170px;
+  width: 150px;
+  height: 125px;
+  padding: 16px;
+}
+.bank-logo img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .connect-erp .title {
   margin: 0 auto 50px;
@@ -992,7 +1003,7 @@ span.color_text {
   margin: 0 0 0 18px;
 }
 .connect-erp {
-  padding-bottom: 133px;
+  padding-bottom: 80px;
 }
 .trust-block {
   background: #0d0d0d;

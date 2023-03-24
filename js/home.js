@@ -208,6 +208,7 @@ jQuery(document).ready(function () {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
+    pauseOnHover: false,
   });
   $(".award-slider").slick({
     dots: true,
@@ -220,6 +221,7 @@ jQuery(document).ready(function () {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
+    pauseOnHover: false,
   });
 
   // cashflo advantage slider
