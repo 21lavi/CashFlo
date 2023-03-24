@@ -181,11 +181,7 @@ body {
   place-items: center;
   overflow: hidden;
 }
-.logo-box img {
-  padding: 0 6px;
-  min-width: 95px;
-  max-height: 40px;
-}
+
 .logo-team .marquee-left .row-wrap {
   display: flex;
   align-items: center;
@@ -233,6 +229,9 @@ body {
   padding: 0 6px;
   filter: grayscale(1);
   transition: all .3s;
+  padding: 0 6px;
+  min-width: 85px;
+  max-height: 40px;
 }
 .brand-logo {
   padding-top: 100px;
