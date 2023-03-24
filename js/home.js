@@ -10,7 +10,6 @@ jQuery(document).ready(function () {
       opacity: 0,
       duration: 1,
       speed: 400,
-      
     });
     if (window.innerWidth < 768) {
       ScrollTrigger.create({
@@ -224,35 +223,6 @@ jQuery(document).ready(function () {
     pauseOnHover: false,
   });
 
-  // cashflo advantage slider
-  // $(".advantage-slider").slick({
-  //   arrows: true,
-  //   dots: false,
-  //   autoplay: true,
-  //   centerMode: true,
-  //   centerPadding: "190px",
-  //   speed: 900,
-  //   infinite: true,
-  //   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   responsive: [
-  //     {
-  //       breakpoint: 992,
-  //       settings: {
-  //         slidesToShow: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 575,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         centerPadding: "60px",
-  //       },
-  //     },
-  //   ],
-  // });
-
   $(".coral-wrapper").mousemove(function (ev) {
     var gradient = this;
     gradient.style.background =
@@ -270,16 +240,6 @@ jQuery(document).ready(function () {
       "linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%)"
     );
   });
-
-  // var horizontal_scroll_tl = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".wrapper",
-  //     scrub: 0.3,
-  //     start: "bottom bottom",
-  //     end: "bottom left",
-  //   }})
-  // horizontal_scroll_tl
-  //   .to(".marquee", {xPercent: -66.666,})
   $(".line-highlight").hover(
     function () {
       var date = $(this).data("date");
@@ -317,53 +277,46 @@ jQuery(document).ready(function () {
   );
 });
 
-
-
-
-
 // Motion animation
 
+document.addEventListener("DOMContentLoaded", function () {
+  const twoWayCurve = document.querySelector("#two_way_curve");
+  const threeWayCurve = document.querySelector("#three_way_curve");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const twoWayCurve = document.querySelector('#two_way_curve');
-  const threeWayCurve = document.querySelector('#three_way_curve');
-  
-// Set the initial dash offset to the total length of the path
-const totalLengthTwoWay = twoWayCurve.getTotalLength();
-const totalLengthThreeWay = threeWayCurve.getTotalLength();
+  // Set the initial dash offset to the total length of the path
+  const totalLengthTwoWay = twoWayCurve.getTotalLength();
+  const totalLengthThreeWay = threeWayCurve.getTotalLength();
 
-// Set up the animation
-gsap.set([twoWayCurve, threeWayCurve], {
-  strokeDasharray: totalLengthTwoWay,
-  strokeDashoffset: totalLengthTwoWay,
-  'stroke-dashoffset': -totalLengthTwoWay
+  // Set up the animation
+  gsap.set([twoWayCurve, threeWayCurve], {
+    strokeDasharray: totalLengthTwoWay,
+    strokeDashoffset: totalLengthTwoWay,
+    "stroke-dashoffset": -totalLengthTwoWay,
+  });
+
+  gsap.to(twoWayCurve, {
+    strokeDashoffset: -totalLengthTwoWay,
+    duration: 7,
+    repeat: -1,
+    ease: "none",
+    delay: 1,
+  });
+
+  gsap.to(threeWayCurve, {
+    strokeDashoffset: -totalLengthThreeWay,
+    duration: 7,
+    repeat: -1,
+    ease: "none",
+    delay: 3.5,
+  });
 });
-
-gsap.to(twoWayCurve, {
-  strokeDashoffset: -totalLengthTwoWay,
-  duration: 7,
-  repeat: -1,
-  ease: 'none',
-  delay: 1,
-});
-
-gsap.to(threeWayCurve, {
-  strokeDashoffset: -totalLengthThreeWay,
-  duration: 7,
-  repeat: -1,
-  ease: 'none',
-  delay: 3.5, 
-});
-
-});
-
 
 // motion Second animation
 // Select the paths
-document.addEventListener('DOMContentLoaded', function() {
-  const twoWayCurves = document.querySelector('#two_way_curves');
-  const threeWayCurves = document.querySelector('#three_way_curves');
-  const oneWayCurves = document.querySelector('#one_way_curves');
+document.addEventListener("DOMContentLoaded", function () {
+  const twoWayCurves = document.querySelector("#two_way_curves");
+  const threeWayCurves = document.querySelector("#three_way_curves");
+  const oneWayCurves = document.querySelector("#one_way_curves");
   // Set the initial dash offset to the total length of the path
   const totalLengthTwoWays = twoWayCurves.getTotalLength();
   const totalLengthThreeWays = threeWayCurves.getTotalLength();
@@ -372,29 +325,27 @@ document.addEventListener('DOMContentLoaded', function() {
   gsap.set([twoWayCurves, threeWayCurves, oneWayCurves], {
     strokeDasharray: totalLengthTwoWays,
     strokeDashoffset: totalLengthTwoWays,
-    'stroke-dashoffset': -totalLengthTwoWays,
+    "stroke-dashoffset": -totalLengthTwoWays,
   });
-  gsap.to(twoWayCurves,  {
+  gsap.to(twoWayCurves, {
     strokeDashoffset: -totalLengthTwoWays,
     duration: 7,
     repeat: -1,
-    ease: 'none',
+    ease: "none",
     delay: 1,
   });
-  gsap.to(oneWayCurves,  {
+  gsap.to(oneWayCurves, {
     strokeDashoffset: -totalLengthOneWays,
     duration: 7,
     repeat: -1,
-    ease: 'none',
+    ease: "none",
     delay: 2,
   });
   gsap.to(threeWayCurves, {
     strokeDashoffset: -totalLengthThreeWays,
     duration: 7,
     repeat: -1,
-    ease: 'none',
+    ease: "none",
     delay: 3.5,
   });
-  });
-
-  
+});
