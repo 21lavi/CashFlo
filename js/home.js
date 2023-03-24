@@ -225,33 +225,33 @@ jQuery(document).ready(function () {
   });
 
   // cashflo advantage slider
-  $(".advantage-slider").slick({
-    arrows: true,
-    dots: false,
-    autoplay: true,
-    centerMode: true,
-    centerPadding: "190px",
-    speed: 900,
-    infinite: true,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "60px",
-        },
-      },
-    ],
-  });
+  // $(".advantage-slider").slick({
+  //   arrows: true,
+  //   dots: false,
+  //   autoplay: true,
+  //   centerMode: true,
+  //   centerPadding: "190px",
+  //   speed: 900,
+  //   infinite: true,
+  //   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 575,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         centerPadding: "60px",
+  //       },
+  //     },
+  //   ],
+  // });
 
   $(".coral-wrapper").mousemove(function (ev) {
     var gradient = this;
@@ -396,3 +396,5 @@ document.addEventListener('DOMContentLoaded', function() {
     delay: 3.5,
   });
   });
+
+  
