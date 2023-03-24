@@ -1984,3 +1984,18 @@ span.color_text {
     padding: 0;
   }
 }
+
+
+/* Arrow button animtion */
+
+.animated_btn a:hover img{
+   transform: rotate(45deg);
+   transition: all 0.4s;
+}
+a.white-button img, .btn-default img, .power_business_btn img, .animated_btn a img{
+  transition: all 1s;
+}
+a.white-button:hover img, .btn-default:hover img, .power_business_btn:hover img{
+  transform: translate(4px, 0px);
+  transition: all 0.8s;
+}
