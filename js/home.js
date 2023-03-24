@@ -225,33 +225,33 @@ jQuery(document).ready(function () {
   });
 
   // cashflo advantage slider
-  $(".advantage-slider").slick({
-    arrows: true,
-    dots: false,
-    autoplay: true,
-    centerMode: true,
-    centerPadding: "190px",
-    speed: 900,
-    infinite: true,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "60px",
-        },
-      },
-    ],
-  });
+  // $(".advantage-slider").slick({
+  //   arrows: true,
+  //   dots: false,
+  //   autoplay: false,
+  //   centerMode: true,
+  //   centerPadding: "190px",
+  //   speed: 900,
+  //   infinite: true,
+  //   cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   responsive: [
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 575,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         centerPadding: "60px",
+  //       },
+  //     },
+  //   ],
+  // });
 
   $(".coral-wrapper").mousemove(function (ev) {
     var gradient = this;
@@ -395,4 +395,39 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: 'none',
     delay: 3.5,
   });
+  });
+
+
+  window.addEventListener("load", function () {
+    let horizontalSections = gsap.utils.toArray(".section-pin");
+    horizontalSections.forEach((section) => {
+      let wrap = section.querySelector(".pin-wrap");
+      let wrapWidth = wrap.offsetWidth;
+      let horizontalScrollLength = wrapWidth - window.innerWidth;
+
+      // const scrolled = gsap
+      //   .timeline({
+      //     scrollTrigger: {
+      //       trigger: horizontalSections,
+      //       scrub: true,
+      //       start: "top center",
+      //       end: "bottom center",
+      //     },
+      //   })
+      //   .to(wrap, { autoAlpha: 1, left: 0 }, 0);
+
+      const main = gsap
+        .timeline({
+          scrollTrigger: {
+            scrub: true,
+            trigger: section,
+            pin: true,
+            start: "top top",
+          },
+        })
+        .to(wrap, {
+          x: -horizontalScrollLength,
+          ease: "none",
+        });
+    });
   });

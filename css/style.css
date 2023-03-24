@@ -1260,6 +1260,7 @@ span.color_text {
 .item-content {
   padding-top: 50px;
   position: relative;
+  text-align: left;
 }
 
 .advantage-slider .item h3 span {
@@ -2364,4 +2365,46 @@ a.white-button img, .btn-default img, .power_business_btn img, .animated_btn a i
 a.white-button:hover img, .btn-default:hover img, .power_business_btn:hover img{
   transform: translate(4px, 0px);
   transition: all 0.8s;
+}
+
+
+.section-pin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  color: var(--bg-color);
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  left: 0;
+  position: relative;
+  opacity: 0.8;
+}
+.inner-section {
+  background: var(--text-color);
+  margin: 0 10px;
+  /* height: 500px;
+  width: 500px; */
+  text-align: center;
+  padding: 30px;
+}
+
+.advantage-slider-inner{
+  height: 500px;
+  width: 550px;
+}
+
+
+.advantage-slider_wrap .inner-section 
+  .item {
+    border: 1px solid var(--secondaryColor);
+    border-radius: 6.78819px;
+    background: var(--white);
+    position: relative;
+
 }
