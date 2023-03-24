@@ -478,6 +478,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .variance-box.dark {
@@ -1138,6 +1139,7 @@ span.color_text {
 }
 
 .advantage-slider .slick-prev {
+  display: none!important;
   background-image: url("../images/arrow-right.svg");
   right: 10%;
   transform: scaleX(-1);
