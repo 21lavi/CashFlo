@@ -241,13 +241,13 @@ body {
   padding-top: 145px;
 }
 .automation_slider {
-  padding: 100px 0 108px;
+  padding: 100px 0 74px;
   background-color: #0d0d0d;
   position: relative;
 }
 .automation_slider h2 {
   text-align: center;
-  margin: 0 0 84px;
+  margin: 0 0 80px;
   letter-spacing: -0.01em;
 }
 
@@ -867,7 +867,7 @@ span.color_text {
   margin: 0 auto;
   box-shadow: 0px 0px 13.4579px 2.4469px rgba(105, 71, 52, 0.1);
   padding: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   margin-top: -190px;
   position: relative;
   z-index: 1;
@@ -881,6 +881,7 @@ span.color_text {
   font-weight: 500;
   font-size: 30px;
   color: var(--mainBlack);
+  margin-top: 0;
 }
 .query-row {
   display: flex;
@@ -959,7 +960,7 @@ span.color_text {
   column-gap: 10px;
 }
 .center-text {
-  padding: 37px 0 67px;
+  padding: 35px 0 67px;
 }
 .center-text p {
   display: flex;
@@ -1049,7 +1050,7 @@ span.color_text {
   font-size: 50px;
 }
 .blok-box:nth-child(3) {
-  right: 14%;
+  right: 15%;
   top: 11%;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(7px);
@@ -1123,6 +1124,8 @@ span.color_text {
   border: 1.5px solid #10181a;
   font-size: 0;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .advantage-slider .slick-list {
   padding-left: 0px !important;
@@ -1136,7 +1139,22 @@ span.color_text {
 }
 
 .advantage-slider .slick-prev {
-  display: none !important;
+  background-image: url("../images/arrow-right.svg");
+  right:10%;
+  transform: scaleX(-1);
+  background-size: 25px;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+.advantage-slider .slick-prev.slick-disabled {
+  opacity: 0;
 }
 .advantage-slider .slick-next:before {
   display: none !important;
@@ -1388,7 +1406,7 @@ span.color_text {
   }
 
   .automation_slider {
-    padding: 80px 0;
+    padding: 80px 0 60px;
   }
 
   .automation_slider h2 {
@@ -1399,7 +1417,7 @@ span.color_text {
     height: 70px;
   }
   .progressBarContainer .item.active span {
-    font-size: 22px;
+    font-size: 20px;
   }
   .progressBarContainer span {
     font-size: 18px;
@@ -1411,11 +1429,14 @@ span.color_text {
     padding: 80px 0 40px;
   }
   .financing-slider-nav {
-    width: 200px;
+    width: 340px;
   }
   .financing-slider {
-    width: calc(100% - 200px);
+    width: calc(100% - 340px);
   }
+  .automation_slider .item img {
+    width: 100%;
+}
   .process_wrap .title {
     margin-bottom: 50px;
   }
@@ -1434,9 +1455,14 @@ span.color_text {
   }
 
   .coral-wrapper {
-    padding: 100px 0;
+    padding: 80px 0;
   }
-
+  .text-box .text-button {
+    margin-top: 50px;
+}
+.product-image {
+  margin-bottom: 20px;
+}
   .inner-box h2 {
     font-size: 50px;
   }
