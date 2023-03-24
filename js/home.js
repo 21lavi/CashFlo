@@ -214,11 +214,11 @@ jQuery(document).ready(function () {
   $(".advantage-slider").slick({
     arrows: true,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     centerMode: true,
     centerPadding: "190px",
     speed: 900,
-    infinite: true,
+    infinite: false,
     cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
     slidesToShow: 3,
     slidesToScroll: 1,
