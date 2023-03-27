@@ -44,7 +44,6 @@ body {
 }
 
 .banner-text h1 {
-  visability: hidden;
   margin-bottom: 20px;
   color: var(--secondaryBlack);
   margin-top: 0;
@@ -1285,19 +1284,6 @@ span.color_text {
   width: 700px;
   height: 500px;
   border: 1px solid #ccc;
-}
-
-.line-highlight:hover {
-  stroke: #ccc;
-}
-
-.line-highlight.highlight {
-  fill: transparent;
-  stroke: #fff;
-}
-
-.line-highlight.highlight-hover {
-  stroke: #fff;
 }
 
 .pined {
