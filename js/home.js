@@ -224,6 +224,7 @@ jQuery(document).ready(function () {
 
   $(".coral-wrapper").mousemove(function (ev) {
     var gradient = this;
+    gradientSize = 100;
     gradient.style.background =
       "radial-gradient( circle at " +
       ev.clientX +
@@ -239,41 +240,7 @@ jQuery(document).ready(function () {
       "linear-gradient(52.86deg, #EF7065 0%, #FF9A85 109.94%)"
     );
   });
-  $(".line-highlight").hover(
-    function () {
-      var date = $(this).data("date");
-      var x = parseFloat($(this).attr("x"));
-      var y = parseFloat($(this).attr("y"));
-      var width = parseFloat($(this).attr("width"));
-      var height = parseFloat($(this).attr("height"));
 
-      $('.line-highlight[data-date="' + date + '"]').addClass("highlight");
-      $(this).addClass("highlight-hover");
-
-      $(".line-highlight")
-        .not('.highlight-hover, [data-date="' + date + '"]')
-        .each(function () {
-          var rectX = parseFloat($(this).attr("x"));
-          var rectY = parseFloat($(this).attr("y"));
-          var rectWidth = parseFloat($(this).attr("width"));
-          var rectHeight = parseFloat($(this).attr("height"));
-          console.log(width, "width");
-          console.log(height, "width");
-          if (rectX + rectWidth == x && rectY == y) {
-            $(this).addClass("highlight");
-          } else if (rectX == x + width && rectY == y) {
-            $(this).addClass("highlight");
-          } else if (rectY + rectHeight == y && rectX == x) {
-            $(this).addClass("highlight");
-          } else if (rectY == y + height && rectX == x) {
-            $(this).addClass("highlight");
-          }
-        });
-    },
-    function () {
-      $(".line-highlight").removeClass("highlight highlight-hover");
-    }
-  );
 });
 
 // Motion animation
