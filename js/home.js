@@ -9,7 +9,6 @@ jQuery(document).ready(function () {
       stagger: 0.1,
       opacity: 0,
       duration: 1,
-      speed: 400,
     });
     if (window.innerWidth < 768) {
       ScrollTrigger.create({
@@ -348,4 +347,29 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "none",
     delay: 3.5,
   });
+
+  var footerWrap = $(".footer");
+  var marqueeSection = $(".marquee")
+  var marqueeWidth = $(".marquee").outerWidth();
+  var windowWidth = $(document).outerWidth();
+  var moveSectionWidth = 0;
+  if (marqueeWidth > windowWidth) {
+    moveSectionWidth = marqueeWidth - windowWidth;
+  } else {
+    moveSectionWidth;
+  }
+
+  const marquee = gsap
+    .timeline({
+      scrollTrigger: {
+        scrub: true,
+        trigger: footerWrap,
+        // pin: true,        
+        start: "center +=30%",
+      },
+    })
+    .to(marqueeSection, {
+      x: -moveSectionWidth,
+      ease: "none",
+    });
 });

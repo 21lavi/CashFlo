@@ -616,27 +616,21 @@ span.color_text {
 }
 
 .marquee {
-  white-space: nowrap;
-  transition: all 0.1s ease;
   display: flex;
-  align-items: center;
-  transform: translateX(-50%);
-  --copies: 2;
-  -webkit-animation: marquee-move linear infinite;
-  animation: marquee-move linear infinite;
-  -webkit-animation-duration: 40s;
-  animation-duration: 40s;
+  align-items: center;  
 }
 
 .marquee p {
   display: inline-block;
   color: #fcf6f0;
-  font-size: 130px;
+  font-size: 9rem;
   line-height: 1.2;
   font-weight: 500;
   margin: 0;
   transition: all 1s ease;
   padding-top: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   white-space: nowrap;
 }
 .marquee p span {
