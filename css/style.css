@@ -125,47 +125,6 @@ body {
 .play-button img {
   max-width: 20px;
 }
-/* .modalOverlayNew {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--mainBlack);
-  text-align: center;
-  z-index: 11;
-  cursor: pointer;
-  opacity: 0;
-} */
-
-.modalContainer {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-
-.messageWrapper {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 800px;
-  height: 400px;
-  background-color: var(--white);
-  position: absolute;
-  z-index: 12;
-  opacity: 0;
-}
-
-.message {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .brand-logo p {
   font-weight: 400;
   font-size: 18px;
@@ -196,7 +155,8 @@ body {
   -webkit-animation-duration: 40s;
   animation-duration: 40s;
 }
-.logo-team:after, .logo-team:before {
+.logo-team:after,
+.logo-team:before {
   content: "";
   position: absolute;
   display: block;
@@ -204,12 +164,22 @@ body {
   height: 100%;
   top: 0;
 }
-.logo-team:after { 
-  background: linear-gradient( 90deg, #ffffff 2.05%, rgba(255, 255, 255, 0) 100.28%, #ffffff 96.57% );
+.logo-team:after {
+  background: linear-gradient(
+    90deg,
+    #ffffff 2.05%,
+    rgba(255, 255, 255, 0) 100.28%,
+    #ffffff 96.57%
+  );
   left: 0;
 }
 .logo-team:before {
-  background: linear-gradient( -90deg, #ffffff 2.05%, rgba(255, 255, 255, 0) 100.28%, #ffffff 96.57% );
+  background: linear-gradient(
+    -90deg,
+    #ffffff 2.05%,
+    rgba(255, 255, 255, 0) 100.28%,
+    #ffffff 96.57%
+  );
   right: 0;
   z-index: 1;
 }
@@ -227,7 +197,7 @@ body {
 .logo-box img {
   padding: 0 6px;
   filter: grayscale(1);
-  transition: all .3s;
+  transition: all 0.3s;
   padding: 0 6px;
   min-width: 85px;
   max-height: 40px;
@@ -250,9 +220,6 @@ body {
 .automation_slider .slick-next:before {
   color: black;
 }
-.slider.single-item {
-  overflow: hidden;
-}
 .automation_slider .slick-dots {
   bottom: -30px;
 }
@@ -267,6 +234,7 @@ body {
 .automation_slider .item img {
   margin: 0 auto;
   max-width: 100%;
+  display: block;
 }
 .automation_slider .bg-svg,
 .trust-cashflo .bg-svg {
@@ -400,22 +368,18 @@ body {
   display: flex;
   align-items: center;
 }
-
 .variance-col {
   width: 76%;
   position: relative;
   padding: 0 15px;
 }
-
 .list-col {
   width: 50%;
   padding: 0 15px;
 }
-
 .variance-box.light {
   background: #fefbf8;
 }
-
 .variance-box {
   border-radius: 20px;
   overflow: hidden;
@@ -453,23 +417,18 @@ body {
   line-height: 35px;
   letter-spacing: -0.36px;
 }
-
 .dark .variance-list ul li {
   color: white;
 }
-
 .light .variance-list ul li {
   color: #2e3434;
 }
-
 .dark .variance-list ul li:nth-child(odd) {
   background: #434343;
 }
-
 .light .variance-list ul li:nth-child(odd) {
   background: #f7f0ef;
 }
-
 .center-box {
   position: absolute;
   width: 70px;
@@ -484,11 +443,9 @@ body {
   justify-content: center;
   z-index: 1;
 }
-
 .variance-box.dark {
   background: #393939;
 }
-
 .dark .variance-head p {
   font-weight: 600;
   font-size: 20px;
@@ -497,7 +454,6 @@ body {
   margin: 0;
   line-height: 1.5;
 }
-
 .center-box p {
   font-weight: 400;
   font-size: 30px;
@@ -573,7 +529,7 @@ span.color_text {
 .testimonial_bottom_content .testimonial_name {
   font-size: 25px;
   line-height: 30px;
-  color: #ef7267;
+  color: var(--secondaryColor);
   margin: 0 0 15px;
   font-weight: 400;
 }
@@ -645,7 +601,7 @@ span.color_text {
   font-weight: 500;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: var(--white);
   color: #2e3434;
 }
 .power_business_btn a img {
@@ -679,16 +635,6 @@ span.color_text {
 }
 .marquee p span {
   padding-right: 20px;
-}
-
-@-webkit-keyframes marquee-move {
-  0% {
-    transform: translateZ(0);
-  }
-
-  to {
-    transform: translate3d(calc(100% / var(--copies) * -1), 0, 0);
-  }
 }
 
 @keyframes marquee-move {
@@ -772,7 +718,11 @@ span.color_text {
 .coral-wrapper {
   position: relative;
   padding: 125px 0;
-  background: linear-gradient(52.86deg, #ef7065 0%, #ff9a85 109.94%);
+  background: linear-gradient(
+    52.86deg,
+    var(--secondaryColor) 0%,
+    #ff9a85 109.94%
+  );
   overflow: hidden;
   box-shadow: 0px 0px 15px rgba(243, 115, 74, 0.11);
   transition: opacity 0.5s ease-in-out;
@@ -807,6 +757,9 @@ span.color_text {
   width: 100%;
   margin-top: 50px;
   text-align: center;
+  .trust-block {
+    padding: 50px 0 40px;
+  }
 }
 .text-button .white-button {
   background: var(--white);
@@ -942,12 +895,13 @@ span.color_text {
 .find-solution-btn button i {
   transition: all 0.3s;
 }
-.bank-logo {
-  background: #ffffff;
-  border-radius: 20px;
+
+.bank-logo div {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  border-radius: 20px;
   width: 150px;
   height: 125px;
   padding: 16px;
@@ -1022,63 +976,11 @@ span.color_text {
   text-align: center;
   margin: 0 0 20px;
 }
-.blok-box {
-  position: absolute;
-  border-radius: 20px;
-  min-width: 295px;
-  height: 288px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.blok-box p {
-  color: rgba(255, 255, 255, 0.75);
-  margin: 20px 0 0;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-}
-.blok-box h2 {
-  font-weight: 500;
-  font-size: 60px;
-  line-height: 67px;
-  color: #fff;
-  margin: 0;
-}
-.blok-box:nth-child(2) {
-  top: -50px;
-  left: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(7px);
-}
-.blok-box:nth-child(4) h2 {
-  font-size: 50px;
-}
-.blok-box:nth-child(3) {
-  right: 15%;
-  top: 11%;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(7px);
-}
 
-.blok-box:nth-child(4) {
-  left: 15%;
-  bottom: 8%;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(7px);
-}
-
-.blok-box:nth-child(5) {
-  right: 0;
-  bottom: -65px;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(7px);
-}
 /* Advantage section */
 .advantage-wrap .main-container {
   margin-right: 0;
-  padding: 0;  
+  padding: 0;
 }
 .cashflo-advantage {
   background: rgb(236 228 220 / 50%);
@@ -1106,7 +1008,7 @@ span.color_text {
 .advantage-slider .item {
   margin: 0 10px;
   height: 450px;
-  width: 350px;  
+  width: 350px;
 }
 .advantage-slider .item .item_icon {
   background: #000;
@@ -1239,7 +1141,7 @@ span.color_text {
   position: static;
   transform: translateY(0);
 }
-.advantage-slider {  
+.advantage-slider {
   position: relative;
 }
 
@@ -1285,10 +1187,6 @@ span.color_text {
   margin: 0 -15px;
 }
 
-.col-box {
-  width: 33.33%;
-  padding: 0 15px;
-}
 .award_logos {
   width: 50%;
   padding: 0 15px;
@@ -1591,7 +1489,7 @@ span.color_text {
     padding: 35px 0 50px;
   }
   .connect-erp {
-    padding-bottom: 90px;
+    padding-bottom: 30px;
   }
   .variance-list ul li {
     font-size: 16px;
@@ -1606,41 +1504,19 @@ span.color_text {
     font-size: 20px;
     text-align: center;
   }
-  .blok-box h2 {
-    font-size: 50px;
+  .bank-logo div {
+    width: 110px;
+    height: 90px;
   }
-  .blok-box p {
-    font-size: 18px;
-    margin-top: 5px;
+  .connect-erp .title {
+    margin-bottom: 30px;
   }
-  .blok-box {
-    min-width: 245px;
-    height: 238px;
+  .trust-block {
+    padding: 72px 0 58px;
   }
-  .blok-box:nth-child(4) h2 {
-    font-size: 40px;
-  }
-  .trust-block .main-container {
-    min-height: 712px;
-  }
-  .blok-box:nth-child(5) {
-    right: 5%;
-    bottom: -6%;
-  }
-  .blok-box:nth-child(2) {
-    left: 5%;
-    top: -6%;
-  }
-  .blok-box:nth-child(3) {
-    right: 10%;
-  }
-  .advantage-slider .slick-prev {
-    right: 15%;
-  }
-  .advantage-slider .slick-arrow {
-    top: -85px;
-    width: 52px;
-    height: 52px;
+  .advantage-wrap h2.title {
+    padding: 0 15px;
+    margin-bottom: 0;
   }
   .award_content h3 {
     font-size: 40px;
@@ -1656,6 +1532,12 @@ span.color_text {
   }
   .advantage-slider {
     padding-top: 30px;
+  }
+  .advantage-slider .item:hover h3 {
+    transform: translateY(-75px);
+  }
+  .advantage-slider {
+    height: 505px;
   }
 }
 @media (max-width: 991px) {
@@ -1696,57 +1578,17 @@ span.color_text {
   .inner-box {
     padding: 0 15px;
   }
-  /* 
-  .find-solution:nth-child(3),
-  .find-solution,
-  .find-solution:nth-child(4) {
-    width: 40%;
-  } */
 
-  .find-solution:nth-child(4) {
-    width: 50%;
-  }
-  .advantage-slider .slick-slide {
-    padding: 0 10px;
-  }
-
-  .advantage-slider .slick-current .item:after {
-    opacity: 1;
-  }
-  .advantage-slider .slick-current .item .item-hidden-content {
-    position: static;
-    transform: translateY(0);
-  }
-  .advantage-slider .slick-current .item h3 {
-    transform: translateY(0px);
-    color: var(--white);
-  }
-  .advantage-slider .slick-current .item .item_icon {
-    background-color: var(--white);
-  }
   .advantage-slider .item:hover h3 {
     transform: none;
     position: static;
     color: var(--mainBlack);
   }
-  .advantage-slider .item:hover * {
-    color: var(--mainBlack);
-  }
-  .advantage-slider .item:hover:after {
-    opacity: 0;
-  }
-  .advantage-slider .item:hover .item_icon {
-    background-color: var(--mainBlack);
-  }
-  .advantage-slider .item:hover .item-hidden-content {
-    display: none;
-  }
+
   .advantage-slider .item h3 {
     font-size: 22px;
   }
-  .advantage-slider .slick-current .item .item_icon .hover-icon {
-    opacity: 1;
-  }
+
   .item-inner {
     min-height: 380px;
   }
@@ -1805,7 +1647,11 @@ span.color_text {
     padding: 20px 30px;
     height: 100px;
   }
-
+  .connect-erp .row-wrap {
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: flex-start;
+  }
   .query-wrap {
     margin-top: -150px;
   }
@@ -1819,6 +1665,9 @@ span.color_text {
   }
   .parameters-col ul li:first-child {
     display: block;
+  }
+  .trust-block {
+    padding: 50px 0 40px;
   }
 }
 @media (max-width: 767px) {
@@ -1850,10 +1699,6 @@ span.color_text {
   .brand-logo {
     padding: 50px 0 10px;
   }
-  .messageWrapper {
-    width: 90% !important;
-  }
-
   .title {
     font-size: 30px;
     line-height: 38px;
@@ -1882,7 +1727,7 @@ span.color_text {
   }
 
   .automation_slider h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .automation_slider .item img {
     width: 100%;
@@ -1955,29 +1800,17 @@ span.color_text {
     font-size: 14px;
     line-height: 1.4;
   }
-  .icon-block img {
-    width: 33px;
-  }
-
   .query-wrap h3 {
     font-size: 22px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
-
   .query-wrap {
     margin-top: -120px;
     margin-bottom: 30px;
   }
-
   .advantage-wrap {
     padding: 20px 0;
-  }
-
-  .advantage-slider .slick-arrow {
-    width: 40px;
-    height: 40px;
-    background-size: 13px;
-    top: -60px;
   }
   .award_content h3 {
     font-size: 35px;
@@ -1988,15 +1821,6 @@ span.color_text {
   .advantage-slider {
     padding-top: 30px;
   }
-
-  .col-box {
-    width: 100%;
-  }
-
-  .right-col .row-wrap {
-    margin-top: 30px;
-  }
-
   .marquee p {
     font-size: 80px;
     padding: 0;
@@ -2062,49 +1886,33 @@ span.color_text {
   .progressBarContainer .item.active span {
     font-size: 18px;
   }
-  .advantage-slider .slick-current .item .item_icon .hover-icon {
-    opacity: 1;
-  }
 
-  .advantage-slider .item:hover .item_icon .hover-icon {
-    opacity: 0;
-  }
-
-  .advantage-slider .item:hover .item_icon .visible-icon {
-    opacity: 1;
-  }
   .advantage-slider {
     padding-top: 10px;
   }
-  .blok-box {
-    min-width: 215px;
-    height: 218px;
-  }
-  .blok-box h2 {
-    font-size: 40px;
-    line-height: inherit;
-  }
-  .blok-box:nth-child(4) h2 {
-    font-size: 32px;
-  }
-  .blok-box p {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  .trust-block .main-container {
-    min-height: 600px;
-  }
-  .blok-box:nth-child(4) {
-    left: 7%;
-    bottom: 5%;
-  }
-  .bank-logo {
-    min-width: 250px;
-    min-height: 140px;
-  }
+
   .circle-logo-main .title {
     margin: 0 0 45px;
   }
+  .advantage-slider .item .item_icon {
+    background-color: var(--white);
+  }
+
+  .advantage-slider .item:after, .hover-icon {
+    opacity: 1;
+  }
+
+  .advantage-slider .item *, .advantage-slider .item h3 {
+    color: var(--white);   
+  }
+  .advantage-slider .item h3{ position: static;}
+  .advantage-slider .item .item-hidden-content {
+    transform: none;
+    position: static;
+}
+.item-inner {
+  min-height: 100%;
+}
 }
 @media (max-width: 575px) {
   .banner-text p {
@@ -2194,17 +2002,6 @@ span.color_text {
     border-radius: 10px 10px 0px 0px;
   }
 
-  .testimonial_slider .slick-dots {
-    margin-top: 20px;
-  }
-
-  .find-solution:nth-child(3),
-  .find-solution,
-  .find-solution:nth-child(4) {
-    width: 100%;
-    padding: 0 5px 10px;
-  }
-
   .query-wrap {
     padding: 20px 15px;
     border-radius: 10px;
@@ -2224,7 +2021,6 @@ span.color_text {
   .find-solution h4 {
     margin-bottom: 15px;
   }
-
   .col-box {
     padding: 0;
   }
@@ -2234,15 +2030,12 @@ span.color_text {
     height: 40px;
     min-width: 150px;
   }
-
   .power_business {
     padding: 40px 0;
   }
-
   .power_business_btn {
     padding-bottom: 20px;
   }
-
   .marquee p {
     font-size: 40px;
   }
@@ -2282,36 +2075,6 @@ span.color_text {
     font-size: 30px;
     line-height: 1.4;
   }
-
-  .blok-box {
-    min-width: 135px;
-    height: 128px;
-  }
-
-  .blok-box h2 {
-    font-size: 25px;
-  }
-
-  .blok-box p {
-    font-size: 14px;
-  }
-
-  .blok-box:nth-child(4) h2 {
-    font-size: 22px;
-  }
-
-  .trust-block .main-container {
-    min-height: 400px;
-  }
-
-  .blok-box:nth-child(4) {
-    left: 5%;
-    bottom: 10%;
-  }
-
-  .blok-box:nth-child(3) {
-    right: 5%;
-  }
   .parameters-col ul li {
     margin: 0 5px 10px !important;
   }
@@ -2324,27 +2087,24 @@ span.color_text {
   .dark .variance-head p {
     font-size: 16px;
   }
-  .advantage-wrap h2.title {
-    padding-right: 120px;
-  }
-  .advantage-slider .slick-prev {
-    right: 20%;
-  }
   .find-solution-btn button {
     font-size: 14px;
   }
   .center-text {
     padding: 15px 0 30px;
   }
-  .bank-logo img {
-    max-height: 65px;
-    max-width: 90px;
-  }
-  .bank-logo {
-    min-width: 160px;
-    min-height: 110px;
-  }
   .connect-erp {
     padding-bottom: 50px;
   }
+
+.advantage-slider {
+    height: 380px;
+}
+
+.advantage-slider-inner, .advantage-slider .item {
+    height: 100%;
+}
+.advantage-slider .item {
+  width: 280px;
+}
 }
