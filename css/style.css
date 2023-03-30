@@ -1499,9 +1499,14 @@ body {
   .query-row {
     flex-wrap: wrap;
   }
-  .parameters-col ul li:first-child {
-    display: block;
-  }
+  .parameters-col ul {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
   .trust-block {
     padding: 50px 0 40px;
   }
@@ -1773,6 +1778,7 @@ body {
   }
   .title {
     font-size: 28px;
+    line-height: 30px;
   }
 
   .product-box {
